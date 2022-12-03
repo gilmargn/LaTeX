@@ -1,0 +1,113 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese,brazil]{babel}
+\usepackage[margin=.65in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{graphicx}% delete the demo option in your actual code
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+%\usepackage{tikz}
+\usetikzlibrary{shapes.multipart, calc}
+\usepackage{rotating}
+\usepackage{caption}
+%\usepackage[version=3]{mhchem}
+
+\pointpoints{ponto}{pontos}
+\hpword{Pontos:}
+\vpword{Pontos}
+\htword{Total}
+\vtword{Total:}
+\vsword{Resultado}
+
+\definecolor{azul}{RGB}{0,32,96}
+\definecolor{verde}{RGB}{0,132,124}
+\definecolor{cinza}{RGB}{0,84,132}
+%\definecolor{cinza2}{RGB}{218,220,216}
+\definecolor{cinza2}{RGB}{132,134,136}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\newcommand*{\vttfamily}{%
+  \fontencoding{T1}\fontfamily{lmvtt}\selectfont
+}
+\lstdefinestyle{Cstyle}{%
+language=C,numbers=left, keywordstyle=\color{mymauve}\vttfamily,commentstyle=\color{mygreen}\vttfamily,stringstyle=\color{blue},basicstyle=\scriptsize\vttfamily,numberstyle=\tiny\vttfamily,breaklines=true,stepnumber=1,tabsize=2,xleftmargin=\leftmarginii,escapechar=!,captionpos=b,morekeywords={include, printf,NULL},columns=flexible,escapeinside={(^}{^)},
+frame=l,
+framesep=2.5mm,
+framexleftmargin=2.5mm,
+fillcolor=\color{cinza2!50},
+rulecolor=\color{ballblue},
+rulecolor=\color{blue}
+}
+
+\lstnewenvironment{C}[1][]
+{
+\lstset{style=Cstyle,#1}
+}
+{}
+
+
+\newcommand{\class}{Nome da disciplina}
+\newcommand{\profname}{Gilmar Gomes do Nascimento}
+\newcommand{\examnum}{Avaliação} \newcommand{\examdate}{$23/11/2022$}
+\newcommand*{\oldneg}{\mathord{\nao}}
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum}{\examdate}
+\runningfootrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Página \thepage\ de \numpages}{}
+%\pagestyle{foot}
+%\lfoot{}
+%\cfoot[]{Página \thepage\ de \numpages}
+%\rfoot{}
+%
+%\runningfootrule
+%\boxedpoints %\pointsinmargin
+%\printanswers
+%\SolutionEmphasis{\color{red}}
+%\definecolor{SolutionBoxColor}{gray}{0.8}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solução:}\enspace}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{Disciplina:} \class &  \multicolumn{2}{c}{\multirow{4}{*}{
+\includegraphics[scale=0.5]{logo.png}}}\\
+\textbf{Prof.:} ~\profname \vspace{0.2in} && \\
+\vspace{0.2in} \textbf{Nome:} \makebox[3in]{\hrulefill} \vspace{0.2in} &&\\
+%\textbf{Matrícula:} \makebox[1.5in]{\hrulefill} \textbf{Nota:} \makebox[1in]{\hrulefill} &&\\ 
+\multicolumn{3}{c}{\textbf{{\examnum \hspace{3px} \examdate}}}\\
+\multicolumn{3}{c}{}\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{1.6pt}
+\parskip=0.1in
+
+%Este exame contêm \numpages\ páginas (incluindo esta capa) e \numquestions\ questões.\\
+%Total de \numpoints~ pontos.
+
+%\begin{center}
+%Grade Table (for teacher use only)\\
+%\addpoints
+%\gradetable[v][questions]
+%\end{center}
+
+\noindent
+%\rule[2ex]{\textwidth}{2pt}
+%\input{boole}
+\input{questions}
+%\input{ferramentas}
+%\input{expressoes}
+%\input{binarios}
+
+%\input{questoes}
+\end{document}
