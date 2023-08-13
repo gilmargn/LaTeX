@@ -1,0 +1,197 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese,brazil]{babel}
+\usepackage[margin=.65in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{graphicx}% delete the demo option in your actual code
+\usepackage{listings}
+\usepackage{circuitikz}    
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart, calc}
+\usepackage{rotating}
+\usepackage{caption}
+%\usepackage[version=3]{mhchem}
+
+\pointpoints{ponto}{pontos}
+\hpword{Pontos:}
+\vpword{Pontos}
+\htword{Total}
+\vtword{Total:}
+\vsword{Resultado}
+
+\definecolor{azul}{RGB}{0,32,96}
+\definecolor{verde}{RGB}{0,132,124}
+\definecolor{cinza}{RGB}{0,84,132}
+%\definecolor{cinza2}{RGB}{218,220,216}
+\definecolor{cinza2}{RGB}{132,134,136}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\newcommand*{\vttfamily}{%
+  \fontencoding{T1}\fontfamily{lmvtt}\selectfont
+}
+\lstdefinestyle{Cstyle}{%
+language=C,numbers=left, keywordstyle=\color{mymauve}\vttfamily,commentstyle=\color{mygreen}\vttfamily,stringstyle=\color{blue},basicstyle=\scriptsize\vttfamily,numberstyle=\tiny\vttfamily,breaklines=true,stepnumber=1,tabsize=2,xleftmargin=\leftmarginii,escapechar=!,captionpos=b,morekeywords={include, printf,NULL},columns=flexible,escapeinside={(^}{^)},
+frame=l,
+framesep=2.5mm,
+framexleftmargin=2.5mm,
+fillcolor=\color{cinza2!50},
+rulecolor=\color{ballblue},
+rulecolor=\color{blue}
+}
+
+\lstnewenvironment{C}[1][]
+{
+\lstset{style=Cstyle,#1}
+}
+{}
+
+
+\newcommand{\class}{Informática Básica}
+\newcommand{\profname}{Gilmar Gomes do Nascimento}
+\newcommand{\examnum}{Avaliação} \newcommand{\examdate}{$19/06/2023$}
+\newcommand*{\oldneg}{\mathord{\nao}}
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum}{\examdate}
+\runningfootrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Página \thepage\ de \numpages}{}
+%\pagestyle{foot}
+%\lfoot{}
+%\cfoot[]{Página \thepage\ de \numpages}
+%\rfoot{}
+%
+%\runningfootrule
+%\boxedpoints %\pointsinmargin
+%\printanswers
+%\SolutionEmphasis{\color{red}}
+%\definecolor{SolutionBoxColor}{gray}{0.8}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solução:}\enspace}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{Disciplina:} \class &  \multicolumn{2}{c}{\multirow{4}{*}{
+\includegraphics[scale=0.5]{logo.png}}}\\
+\textbf{Prof.:} ~\profname \vspace{0.2in} && \\
+\vspace{0.2in} \textbf{Nome:} \makebox[3in]{\hrulefill} \vspace{0.2in} &&\\
+%\textbf{Matrícula:} \makebox[1.5in]{\hrulefill} \textbf{Nota:} \makebox[1in]{\hrulefill} &&\\ 
+\multicolumn{3}{c}{\textbf{{\examnum \hspace{3px} \examdate}}}\\
+\multicolumn{3}{c}{}\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{1.6pt}
+\parskip=0.1in
+
+%Este exame contêm \numpages\ páginas (incluindo esta capa) e \numquestions\ questões.\\
+%Total de \numpoints~ pontos.
+
+%\begin{center}
+%Grade Table (for teacher use only)\\
+%\addpoints
+%\gradetable[v][questions]
+%\end{center}
+
+\noindent
+%\input{shark}
+\begin{questions}
+\question Sobre a história dos computadores. Marque V ou F para cada assertiva\\
+(\hspace{6px}) Santos Dumont é o nome do primeiro computador projetado e construído no Brasil. \\
+(\hspace{6px}) Patinho feio é o nome do supercomputador brasileiro. \\
+(\hspace{6px}) Alan Turing é considerado o pai da computação. \\
+(\hspace{6px}) Condessa de Lovelace é reconhecida principalmente por ter escrito o primeiro algoritmo para ser processado por uma máquina.\\
+(\hspace{6px}) O primeiro computador pessoal é o Apple I. \\
+(\hspace{6px}) ENIAC (Electronic Numerical Integrator and Computer, ou em português, Computador Integrador Numérico Eletrônico) foi o primeiro computador eletrônico da história. 
+
+
+\question Sobre mouse. Marque V ou F para cada assertiva\\
+(\hspace{6px}) Existe mouse mecânico e é conhecido como mouse com bolinha \\
+(\hspace{6px}) O projeto inicial do mouse foi desenvolvido na Xerox. \\
+(\hspace{6px}) O mouse localizado entre as teclas se chama \textit{Pointstick} \\
+(\hspace{6px}) O touchpad pode ser capacitivo e resistivo e é encontrado principalmente em \textit{laptops/notebooks}
+(\hspace{6px}) O \textit{trackball} é um exemplo de mouse ergonômico. \\
+(\hspace{6px}) \textit{Mousepad} também é conhecido como almofada para usar o mouse
+
+
+\question Sobre teclados. Marque V ou F para cada assertiva\\
+(\hspace{6px}) Existe um leiaute de teclado conhecida como Dvorak, porém é menos ergonômico\\
+(\hspace{6px}) É possível adicionar outros leiautes virtuais de teclado. \\
+(\hspace{6px}) O teclado QWERTY só existe em dispositivos móveis. \\
+(\hspace{6px}) Existem teclados mecânicos, contudo eles usam uma membrana de silicone. \\
+(\hspace{6px}) Teclas de controle é composto pelas teclas F1 até a F12,ESC e outras teclas da parte superior. \\
+(\hspace{6px}) Teclas de função é composto pelas teclas: Tab, Shift, CTRL, ALT, ALT FN, Backspace e afins. \\
+(\hspace{6px}) Três luzes se acendem no teclado: Capslock(Fixa), Numlock e scroll lock\\
+(\hspace{6px}) Um teclado retroiluminado pode ser ativado ou desativado por uma tecla ou um \textit{driver}. \\
+(\hspace{6px}) As teclas F, J e 5 possuem um relevo para orientar quem digita sem olhar para o teclado.\\
+(\hspace{6px}) CTRL ESC combinado tem a mesma função que a tecla Super(Windows) que é mostrar o menu Iniciar.
+\question Sobre alguns atalhos com o teclado. Marque V ou F para cada assertiva\\
+(\hspace{6px}) CTRL Home leva o cursor sempre para o início do texto\\
+(\hspace{6px}) Shift e setas de direção seleciona texto. \\
+(\hspace{6px}) ALT w exibe a interrogação \\
+(\hspace{6px}) Tecla Super(Windows) + L bloqueia a tela \\
+(\hspace{6px}) ALT TAB alterna entre janelas. \\
+(\hspace{6px}) ALT barra de espaço ativa as opções para minimizar, maximar, fechar e mover janela. \\
+(\hspace{6px}) Tecla Super(Windows) + Seta de direção ``move" a janela conforme a direção informada. 
+
+\question Sobre as apresentações. Marque V ou F para cada assertiva\\
+(\hspace{6px}) Desenho vetorial é o uso de primitivas geométricas como pontos, linhas, curvas e formas ou polígonos - todos os quais são baseados em expressões matemáticas - para representar imagens em computação gráfica. \\
+(\hspace{6px}) CMYK é mais usado em impressoras e na técnica de \textit{offset} \\
+(\hspace{6px}) RGB é o padrão de monitores e projetos virtuais. \\
+(\hspace{6px}) Dados raster, matriciais ou bitmap (que significa mapa de bits em inglês) são imagens que contêm a descrição de cada pixel.\\
+(\hspace{6px}) São exemplos de navegadores: Firefox, Chrome, Edge\\
+(\hspace{6px}) São exemplos de buscadores: Edge, Bing, Google, Duck Duck Go\\
+(\hspace{6px}) GPL é uma licença de códigos. \\
+(\hspace{6px}) O Projeto GNU surgiu antes do projeto Linux\\
+(\hspace{6px}) São exemplos de editores de imagem: CorelDraw, Photoshop, GIMP.\\
+(\hspace{6px}) São exemplos de editores de vídeo: Vegas, Adobre Premiere, Pitivi.\\
+
+\question Sobre o Microsoft Power Point. Marque V ou F para cada assertiva\\
+(\hspace{6px}) O atalho para criar um novo slide é CTRL M. \\
+(\hspace{6px}) O atalho para criar um novo arquivo é CTRL O. \\
+(\hspace{6px}) Iniciar uma apresentação do slide atual basta usar SHIFT F5\\
+(\hspace{6px}) A extensão dos arquivos em PowerPoint é pptx. \\
+(\hspace{6px}) Não é possível inserir imagens, vídeos ou links.\\
+
+
+\question Sobre o Microsoft Excel. Marque V ou F para cada assertiva \\
+(\hspace{6px}) Para preencher células com dias da semana ou números basta usar arrastar a alça numa célula selecionada.\\
+(\hspace{6px}) Para alterar o conteúdo de uma célula, basta apertar a tecla F3\\
+(\hspace{6px}) Pasta de trabalho é o nome que se dá ao conjunto de planilhas \\
+(\hspace{6px}) As linhas são representadas por letras, enquanto as colunas por números\\
+(\hspace{6px}) Mesclar células é aglomerar várias células transformando em uma.\\
+(\hspace{6px}) A fórmula cont.se serve para contar quantas vezes um conteúdo aparece.\\
+(\hspace{6px}) O símbolo $\Sigma $ é utilizado para automatizar a soma\\
+(\hspace{6px}) Para inserir uma fórmula ou operação matemática é necessário inserir o símbolo = \\
+
+\question Sobre o Microsoft Windows. Marque V ou F para cada assertiva \\
+(\hspace{6px}) Na calculadora do Windows não é possível usar a opção Programador\\
+(\hspace{6px}) Pode ser adicionado mais de um horário no opções data e hora\\
+(\hspace{6px}) Para mostrar a área de trabalho, basta usar a combinação Windows A \\
+(\hspace{6px}) Não é possível criar pastas com o nome con\\
+(\hspace{6px}) O Windows permite a criação de várias contas/usuários\\
+(\hspace{6px}) Para capturar a tela o atalho é Windows Shift S.\\
+(\hspace{6px}) O Windows não possui um programa no estilo \textit{bash}\\
+(\hspace{6px}) Os botões para fechar a janela ficam à esquerda.\\
+(\hspace{6px}) EXT4 é um sistema de arquivos que gerencia o acesso a arquivos em HDs e outras mídias mais comum e recomendável para o uso em dispositivos.  \\
+(\hspace{6px}) Shift Delete apaga o arquivo sem passar pela lixeira.
+
+\end{questions}
+%\rule[2ex]{\textwidth}{2pt}
+%\input{shark}
+%\input{minuta}
+%\input{ferramentas}
+%\input{expressoes}
+%\input{binarios}
+%\input{shark.tex}
+%\input{questions}
+\end{document}

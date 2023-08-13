@@ -1,0 +1,211 @@
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese,brazil]{babel}
+\usepackage[margin=.65in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{graphicx}% delete the demo option in your actual code
+\usepackage{listings}
+\usepackage{circuitikz}    
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart, calc}
+\usepackage{rotating}
+\usepackage{caption}
+%\usepackage[version=3]{mhchem}
+
+\pointpoints{ponto}{pontos}
+\hpword{Pontos:}
+\vpword{Pontos}
+\htword{Total}
+\vtword{Total:}
+\vsword{Resultado}
+
+\definecolor{azul}{RGB}{0,32,96}
+\definecolor{verde}{RGB}{0,132,124}
+\definecolor{cinza}{RGB}{0,84,132}
+%\definecolor{cinza2}{RGB}{218,220,216}
+\definecolor{cinza2}{RGB}{132,134,136}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\newcommand*{\vttfamily}{%
+  \fontencoding{T1}\fontfamily{lmvtt}\selectfont
+}
+\lstdefinestyle{Cstyle}{%
+language=C,numbers=left, keywordstyle=\color{mymauve}\vttfamily,commentstyle=\color{mygreen}\vttfamily,stringstyle=\color{blue},basicstyle=\scriptsize\vttfamily,numberstyle=\tiny\vttfamily,breaklines=true,stepnumber=1,tabsize=2,xleftmargin=\leftmarginii,escapechar=!,captionpos=b,morekeywords={include, printf,NULL},columns=flexible,escapeinside={(^}{^)},
+frame=l,
+framesep=2.5mm,
+framexleftmargin=2.5mm,
+fillcolor=\color{cinza2!50},
+rulecolor=\color{ballblue},
+rulecolor=\color{blue}
+}
+
+\lstnewenvironment{C}[1][]
+{
+\lstset{style=Cstyle,#1}
+}
+{}
+
+
+\newcommand{\class}{Matemática Aplicada}
+\newcommand{\profname}{Gilmar Gomes do Nascimento}
+\newcommand{\examnum}{Avaliação} \newcommand{\examdate}{$19/06/2023$}
+\newcommand*{\oldneg}{\mathord{\nao}}
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum}{\examdate}
+\runningfootrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Página \thepage\ de \numpages}{}
+%\pagestyle{foot}
+%\lfoot{}
+%\cfoot[]{Página \thepage\ de \numpages}
+%\rfoot{}
+%
+%\runningfootrule
+%\boxedpoints %\pointsinmargin
+%\printanswers
+%\SolutionEmphasis{\color{red}}
+%\definecolor{SolutionBoxColor}{gray}{0.8}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solução:}\enspace}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{Disciplina:} \class &  \multicolumn{2}{c}{\multirow{4}{*}{
+\includegraphics[scale=0.5]{logo.png}}}\\
+\textbf{Prof.:} ~\profname \vspace{0.2in} && \\
+\vspace{0.2in} \textbf{Nome:} \makebox[3in]{\hrulefill} \vspace{0.2in} &&\\
+%\textbf{Matrícula:} \makebox[1.5in]{\hrulefill} \textbf{Nota:} \makebox[1in]{\hrulefill} &&\\ 
+\multicolumn{3}{c}{\textbf{{\examnum \hspace{3px} \examdate}}}\\
+\multicolumn{3}{c}{}\\
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{1.6pt}
+\parskip=0.1in
+
+%Este exame contêm \numpages\ páginas (incluindo esta capa) e \numquestions\ questões.\\
+%Total de \numpoints~ pontos.
+
+%\begin{center}
+%Grade Table (for teacher use only)\\
+%\addpoints
+%\gradetable[v][questions]
+%\end{center}
+
+\noindent
+%\input{shark}
+\begin{questions}
+\question Escolha a opção que melhor represente a divisão
+
+\begin{center} 
+\begin{tabular}{rrrrrr}
+a & \multicolumn{1}{|r}{b} & & & & \\\cline{2-2}
+c & d 
+\end{tabular}
+\end{center}
+\begin{multicols}{2}
+\begin{checkboxes}
+\choice Divisor, dividendo, quociente, resto
+\choice Dividendo, divisor, quociente, resto
+\choice Dividendo, quociente, dividendo,resto
+\choice Divisor, quociente, divisor, resto
+\end{checkboxes}
+\end{multicols}
+\question Um vídeo de 3 minutos é executado na velocidade +1.5x. Em quanto tempo ele pode ser visto?
+\begin{multicols}{2}
+\begin{checkboxes}
+    \choice 180 segundos    \choice 90 segundos     \choice 120 segundos     \choice 125 segundos
+\end{checkboxes}
+\end{multicols}
+
+\question Imagine que você tem um arquivo de 1 GB e precisa transferir para um disco removível. A taxa de transferência USB 2.0 é 480 MBits/s, enquanto tempo esse arquivo será transferido?
+\begin{multicols}{2}
+\begin{checkboxes}
+    \choice 28 segundos aproximadamente
+    \choice 17 segundos aproximadamente
+    \choice 120 segundos aproximadamente
+    \choice 125 segundos
+\end{checkboxes}
+\end{multicols}
+
+\question Converta 480$_{10}$ para base binária
+\begin{multicols}{2}
+\begin{checkboxes}
+
+    \choice 000110110000$_{2}$
+    \choice 001010110001$_{2}$
+    \choice 000111100000$_{2}$
+    \choice 100100010000$_{2}$
+\end{checkboxes} 
+\end{multicols}
+
+\question Converta 408$_{10}$ para base octal
+\begin{multicols}{2}
+\begin{checkboxes}
+	 \choice 603$_{8}$
+	 \choice 630$_{8}$
+	 \choice 408$_{8}$
+	 \choice 480$_{8}$
+\end{checkboxes}
+\end{multicols}
+
+\question Converta 408$_{10}$ para base hexadecimal
+\begin{multicols}{2}
+	\begin{checkboxes}
+	\choice 198$_{16}$
+	\choice 199$_{16}$  
+	\choice 197$_{16}$
+	\choice 196$_{16}$
+	\end{checkboxes}
+\end{multicols}
+
+\newpage
+\question As portas lógicas são dispositivos que trabalham com um ou mais sinais de entradae os transformam em um único sinal de saída. Os operadores lógicos estabelecem as relações entre proposições e tornam possível o encadeamento lógico de suas estruturas. Coloque os números que representam a ordem de aparição das portas lógicas.
+
+\begin{multicols}{2}
+
+	(\hspace{9px}) $\neg$ (not) \\	(\hspace{9px}) $\land$ (and, E, \&)\\ 	(\hspace{9px})  $\lor$ (or, OU, $\vert \vert$) 
+
+\begin{circuitikz}[inner sep=0pt,font=\tiny,text height=6pt,text width=18pt]
+\draw 
+ (1,2.5) node[rotate=0,and port] (andp) {}
+(3,2.5) node[rotate=0,or port] (andp1) {}
+(4,2.5) node[rotate=0,not port] (andp2) {};
+
+\end{circuitikz}
+\end{multicols}
+\question Marque V ou F para cada assertiva\\
+(\hspace{6px}) Tautologia quando todas as interpretações da tabela-verdade possuem o valor lógico igual a falso. \\
+(\hspace{6px}) Contradição quando todas interpretações da tabela-verdade possuem o valor lógica igual a falso. \\
+(\hspace{6px}) Contingência ou uma indeterminação quando as interpretações
+possuem valores lógicos iguais a verdadeiro e falso, simultaneamente. \\
+(\hspace{6px}) O número de linhas da tabela-verdade se dá pelo cálculo 2$^n$ onde n representa a quantidade de premissas.
+
+%b) a  b  c  a  b
+\question Construa uma tabela-verdade para: $a \land b \hspace{3px} \lor  c \leftrightarrow \neg a \lor \neg b$
+\begin{solutionbox}{2in} 		
+	\end{solutionbox}
+\question Sobre lógica de predicados resolva as seguintes afirmações utilizando $\forall$, $\exists$. 
+\begin{itemize}
+\item Todos os estudantes serão aprovados
+\item Alguns professores aplicam provas
+\item Nenhuma disciplina é fácil
+\end{itemize}
+\begin{solutionbox}{2in} 		
+	\end{solutionbox}
+
+
+
+\end{questions}
+
+\end{document}
