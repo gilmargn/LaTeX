@@ -1,0 +1,443 @@
+\documentclass{if-beamer}
+\begin{document}
+	
+	\title[Campus Formoso do Araguaia]{Segurança da Informação}
+	\subtitle{Aula 0 }
+	\author{Gilmar Gomes do Nascimento}
+	\institute[IFTO]{
+		Instituto Federal do Tocantins\\
+		Campus Formoso do Araguaia
+	}
+	\date{\today}
+	\logo{
+		\includegraphics[scale=0.0085]{logo.jpg}
+	}
+	\subject{Servers} % metadata
+	
+	\graphicspath{{figuras/}}
+	%---------------------------------------------------------------------------------
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Formação Acadêmica}
+	\begin{itemize}
+	\item Ciência da Computação - UFT   2009 -- 2014
+	\item Especialização Lato Senso - ESAB - 2019
+	\item Especialização Lato Senso - Focus - 2021
+	\item Mestrado em Ciência da Computação - UTFPR - 2024 - atualmente 
+	\end{itemize}
+	
+	\end{frame}
+	
+	\begin{frame}{Atuação Profissional}
+	\begin{itemize}
+	\item Instrutor de Informática  - SENAC - TO  - 2014, 2015
+	\item Professor de Informática - Colégio da Polícia Militar - TO - 2015 - 2016
+	\item Analista de Suporte -  Justiça Federal  - TO - 2017 
+	\item Professor substituto EBTT - IFTO - Campus Colinas do Tocantins - 2017 - 2019
+	\item Professor EBTT - IFAM - Campus Boca do Acre - 2021 - 2026
+	\item Professor EBTT - IFTO - Campus Formoso do Araguaia - 2026
+	\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}{Ementa}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.25]{ementa-security}
+	\end{figure}
+	\end{frame}
+
+\begin{frame}{Netiqueta}
+\begin{figure}
+\includegraphics[scale=0.35]{post-Bluesky0}
+\end{figure}
+\end{frame}
+	
+
+	\begin{frame}[allowframebreaks]{Introdução a Segurança da Informação}
+	Segurança  da  Informação  (SI)  refere-se  ao  conjunto  de  práticas,  políticas  e  medidas  adotadas  para proteger  os  dados  e  informações contra acesso não autorizado, uso  indevido,  modificação,  divulgação  ou  destruição  não  autorizada.  A  SI busca  garantir  a confidencialidade, integridade e disponibilidade das informações, bem como a autenticidade e  não repúdio. 
+	\framebreak
+	\begin{figure}
+	\includegraphics[scale=.5]{sgsi2023.png}
+	\end{figure}
+	\end{frame}
+	
+\begin{frame}{Quem é responsável pela segurança?}
+\begin{itemize}
+\item Usuário
+\item Técnico Informática
+\item Desenvolvedor/administrador
+\item Gerente de TI
+\end{itemize}
+\begin{block}{Resumo}
+Todo mundo é responsável!
+\end{block}
+\end{frame}	
+
+
+\begin{frame}{Usuário}
+\begin{itemize}
+\item \textbf{Senha forte e intransferível }
+\item \textbf{Desconfiar sempre} 
+\item \textbf{Bloqueio físico}
+\item \textbf{Uso consciente da internet e dos dispositivos} 
+\item \textbf{Fotos em locais sensíveis}
+\end{itemize}
+\begin{alertblock}{Fato}
+90\% dos ataques bem-sucedidos começam com erro humano.
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}{Técnico em Informática}
+\begin{itemize}
+\item \textbf{Backup e inventário} 
+\item \textbf{Agir com ética} 
+\item \textbf{Não usar softwares piratas}
+\item \textbf{Orientar usuários e a instituição}
+\item \textbf{Registro de incidentes} 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Desenvolvedor/Administrador}
+\begin{itemize}
+\item \textbf{Desenvolvimento Seguro}
+\item \textbf{Controle de acesso} 
+\item \textbf{Monitoramento ativo}
+\item \textbf{Gerenciamento de patches}
+\end{itemize}
+\framebreak
+\begin{itemize}
+\item \textbf{Cuidado com códigos externos} 
+\item \textbf{Segurança em APIs}
+\end{itemize}
+\begin{block}{Atenção}
+Código funcional não significa código seguro!
+\end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Gerente de TI}
+\begin{itemize}
+\item \textbf{Gestão de Projetos e Modelo de Negócio} - Alinhe a segurança aos objetivos estratégicos da instituição.
+\item \textbf{Alocação de Recursos} - Defenda orçamento para ferramentas, treinamentos e especialistas.
+\item \textbf{Políticas e Procedimentos} - Crie e faça cumprir a Política de Segurança da Informação (PSI).
+\end{itemize}
+\framebreak
+\begin{itemize}
+\item \textbf{Cultura Organizacional} - Promova uma cultura onde segurança é vista como facilitadora, não obstáculo.
+\item \textbf{Gestão de Riscos} - Identifique, avalie e mitigue riscos continuamente.
+\item \textbf{Plano de Continuidade} - Garanta um plano de recuperação em caso de incidentes.
+\end{itemize}
+
+\end{frame}
+
+	
+	\begin{frame}[allowframebreaks]{DevSecOps}
+	DevSecOps significa desenvolvimento, segurança e operações. É uma abordagem a cultura, automação e design da plataforma que integra segurança como uma responsabilidade compartilhada em todo o ciclo de vida da TI.	
+	
+	\framebreak
+	\begin{block}{Shift Left}
+	A segurança é pensada no início do projeto, não no final
+	\end{block}
+	\begin{block}{Automação contínua}
+	Testes de segurança automatizados a cada versão do código	
+	\end{block}
+	\begin{block}{Quebra de Silos}
+	Desenvolvedores, Segurança e Operações trabalham juntos, com métricas e objetivos comuns	
+	\end{block}
+	\end{frame}
+	
+\begin{frame}{Modelo de Negócio da instituição}
+\begin{block}{Quais são os dados sigilosos?}
+\begin{figure}
+\includegraphics[scale=0.45]{lock}
+\end{figure}
+\end{block} 
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Área de atuação}
+
+\begin{itemize}
+\item Serviço público
+\item Iniciativa privada
+\item Terceiro setor
+\end{itemize}
+
+\framebreak
+
+\begin{figure}
+\includegraphics[scale=0.5]{contest}
+\end{figure}
+
+\framebreak
+
+\begin{itemize}
+\item Técnico em Laboratório
+\item Técnico em Informática
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Estrutura de Gestão de Segurança da Informação do IFTO}
+	\begin{block}{Instrução Normativa}
+			\begin{itemize}
+			\item Gestor de Segurança da Informação;
+			\item Gestor de Tecnologia da Informação;
+			\item Encarregado de Tratamento de Dados Pessoais;
+			\item Responsável pela Unidade de Controle Interno;
+			\item Comitê de Segurança da Informação; e
+			\item Equipe de Tratamento e Resposta a Incidentes Cibernéticos.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+	\begin{block}{Confidencialidade}
+	Refere‑se à propriedade de um sistema de não permitir que as informações sejam disponibiliza‑das ou divulgadas a indivíduos, entidades ou processos não autorizados (ISO 27.000, 2018). Assim, a confidencialidade visa preservar o acesso do conteúdo aos(às) usuários(as) explicitamente definidos(as)
+	\end{block}
+	\begin{block}{Disponibilidade}
+	Característica de um sistema que possibilita o acesso à informação sempre que o(a) usuário(a) necessitar (ISO 27.000, 2018). Sob esse enfoque, a disponibilidade visa manter as informações sempre acessíveis, por intermédio das aplicações e sistemas operacionais.	
+	\end{block}
+	\end{frame}
+%---------------------------------------------------------------------
+	\begin{frame}
+	\begin{block}{Integridade}
+	Essa particularidade do sistema confere precisão e completude à informação, evitando que conteúdo informacional seja alterado ou corrompido. O backup e os métodos criptográficos contribuem para a manutenção da integridade das informações, evitando sua destruição e alteração, respectivamente (ISO 27.000, 2018).
+	\end{block}
+	\begin{block}{Privacidade}
+	A Lei Geral de Proteção de Dados (LGPD), identificada como Lei n. 13.709/2018, aborda o tratamento de dados pessoais, dispostos em meio físico ou digital, feito por pessoa física ou jurídica, de direito público ou privado, englobando um amplo conjunto de operações que podem ocorrer em meios
+manuais ou digitais (GOVERNO FEDERAL DO BRASIL, 2018)
+	\end{block}	
+\end{frame}		
+
+\begin{frame}{}
+\begin{block}{Controles}
+Os controles são ações realizadas para a mitigação dos riscos. Cada atividade desempenhada pela organização tem um risco associado, denominado risco inerente, que após a aplicação de controles poderá ter a probabilidade e/ou o impacto diminuídos, sendo denominado, então, risco residual (ABNT NBR ISO/IEC 27005, 2019).
+\end{block}
+\begin{block}{Ameaças}
+Uma ameaça tem o potencial de comprometer ativos, tais como: informações, processos e sistemas e, por isso, também as organizações. Ameaças podem ser de origem natural ou humana e podem ser acidentais ou intencionais. Convém que tanto as fontes das ameaças acidentais quanto das intencionais sejam identificadas. Uma ameaça pode surgir de dentro ou de fora da organização e
+pode se concretizar em um ataque (ABNT NBR ISO/IEC 27005, 2019).
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{block}{Vulnerabilidades}
+Segundo a ISO/IEC 27000:2018, vulnerabilidade é a fraqueza de um ativo ou controle que pode ser explorada por uma ou mais ameaças (ISO 27.000, 2018). Sendo assim, as vulnerabilidades devem ser mapeadas e mitigadas para manter as aplicações e os sistemas seguros.
+\end{block}
+\begin{block}{Risco}
+Risco é o efeito da incerteza no alcance dos objetivos. Um efeito é um desvio em relação ao esperado, podendo ser positivo e/ou negativo. O risco em segurança da informação é muitas vezes expresso em termos de uma combinação de consequências de um evento e a probabilidade de ocorrência.
+\end{block}
+\end{frame}
+	
+%	\begin{frame}[allowframebreaks]{UTC}
+%	O UTC (Tempo Universal Coordenado) é o principal padrão de tempo global que define as horas exatas no mundo. Ele se baseia em relógios atômicos e serve de referência para calcular todos os fusos horários, substituindo o antigo horário GMT. 
+%	Também conhecido como \textbf{tempo civil}, é o fuso horário de referência a partir do qual se calculam todas as outra zonas horárias do mundo.
+%
+%	\framebreak
+%	\begin{figure}
+%	\includegraphics[scale=0.39]{utc}
+%	\end{figure}
+%	\end{frame}
+%	
+%	\begin{frame}[allowframebreaks]{NTP(Network Time Protocol)}
+%		O Network Time Protocol (NTP) é amplamente usado para sincronizar um computador a servidores de horário da Internet ou outras fontes, como receptores de rádio ou satélite ou serviços de modem de telefone. 
+%	\framebreak
+%	\\ Geralmente, ele fornece precisão menor que um milissegundo em LANs e até alguns milissegundos em WANs. As configurações de NTP típicas utilizam vários servidores redundantes e caminhos de rede para obter uma alta precisão e confiabilidade. 
+%	\framebreak
+%	\\ O NTP usa o algoritmo de Marzullo para sincronizar o tempo com a versão atual do NTP. Ele pode manter o tempo na Internet pública em até 10 milissegundos e pode ter um desempenho ainda melhor nas LANs. Os servidores de horário NTP funcionam no conjunto TCP/IP e dependem da porta 123 do Protocolo de Datagrama do Usuário (UDP - User Datagram Protocol).\\
+%	\framebreak
+%	O algoritmo NTP usa essa referência de tempo para determinar a quantidade para adiantar ou retardar o relógio do sistema ou da rede. O NTP analisa os valores de timestamp e a frequência dos erros e sua estabilidade. Um servidor NTP mantém uma estimativa da qualidade dos relógios de referência e de si mesmo.\\
+%	\begin{figure}
+%	\includegraphics[scale=.4]{architecture-ntp}
+%	\end{figure}
+%	
+%	\end{frame}
+%	
+%\begin{frame}[allowframebreaks]{NTP.BR}
+%\begin{figure}
+%\includegraphics[scale=.45]{ntp-br}
+%\caption{Arquitetura NTP}
+%\end{figure}
+%\framebreak
+%A iniciativa NTP.br tem por objetivo oferecer condições para que os servidores Internet no Brasil estejam sincronizados com a hora certa. Mais especificamente, com a Hora Legal Brasileira. Para isso foi firmado um acordo entre o Observatório Nacional (ON), que é a entidade legalmente responsável pela definição do padrão de tempo nacional, a Hora Legal Brasileira, e o NIC.br. \\
+%
+%\framebreak
+%O ON tem como atribuição legal a geração, conservação e disseminação da Hora Legal Brasileira. Rastreado ao Bureau International des Poids et Mesures (BIPM), na França, participa do Tempo Universal Coordenado (TUC ou UTC), juntamente com os órgãos disseminadores de tempo e frequência dos demais países. \\
+%\framebreak
+%Pelos termos do acordo o ON disponibiliza, sem qualquer ônus, ao Núcleo de Informação e Coordenação do Ponto BR – NIC.br, o sincronismo à Hora Legal Brasileira, seguro, confiável, rastreável e auditável, e o NIC.br disponibiliza, sem qualquer ônus, ao ON um conjunto de equipamentos necessários à manutenção da infra-estrutura de sincronismo. \\
+%\framebreak
+%\begin{figure}
+%\includegraphics[scale=0.5]{cesio}
+%\end{figure}
+%\end{frame}
+%
+%
+%\begin{frame}{Pools}
+%\begin{figure}
+%\includegraphics[scale=.35]{pools}
+%\end{figure}
+%
+%\end{frame}
+%\begin{frame}{Hora certa}
+%\begin{figure}
+%\includegraphics[scale=0.8]{syncro-time}
+%\end{figure}
+%\end{frame}	
+%
+%\begin{frame}{Configurando no MS Windows}
+%\begin{figure}
+%\includegraphics[scale=0.37]{setting-time}
+%\end{figure}
+%\end{frame}
+%
+%\begin{frame}[allowframebreaks]{Atenção}
+%Não se recomenda a utilização de dispositivos com sistema operacional Windows como servidores de tempo, com exceção do uso de servidores domain controller no Active Directory, que sincroniza automaticamente os demais dispositivos no mesmo domínio. Não se recomenda a instalação da implementação de referência do NTP, disponível em ntp.org, ou de outros softwares para as funções de cliente ou servidor NTP em dispositivos utilizando Windows 
+%\framebreak
+%
+%\textbf{Não é possível sincronizar o NTP com o serviço de tempo baseado em W32}
+%
+%Quando os roteadores Cisco são configurados para usar os servidores NTP colocados no Ative Diretory, os roteadores Cisco não recebem nenhum pacote NTP do servidor NTP. Esse problema ocorre porque os roteadores Cisco usam os domínios NTP e Ative Diretory usam o serviço W32Time.\\
+%
+%\framebreak
+%A W32Time usa o Simple Network Time Protocol (SNTP), um subconjunto do NTP, para sincronização de tempo. O SNTP e o NTP usam o mesmo formato de pacote de rede. A principal diferença entre o SNTP e o NTP é que o SNTP não fornece as funções de verificação de erros e filtragem fornecidas pelo NTP. Os roteadores e switches da Cisco usam o NTP e permitem todas as funções de verificação de erros e filtragem fornecidas pelo NTP v3. \\
+%
+%\framebreak
+%
+%O Windows W32Time mostra que é uma implementação de SNTP interna (em vez de se afirmar como NTP). O Cisco IOS-NTP, que tenta sincronizar com o W32Time, obtém seu próprio valor de dispersão de raiz que envia ao W32Time e isso se revela caro para que o Cisco IOS-NTP sincronize. Como o valor de dispersão raiz do Cisco IOS-NTP vai além de 1000 ms, ele se dessincroniza (procedimento de seleção de tempo). \\
+%
+%\framebreak
+%Para contornar esse problema e sincronizar um roteador baseado no Cisco IOS, use um servidor NTP autoritativo na Internet, uma caixa UNIX que execute NTPD ou um GPS em determinadas plataformas. \\
+%\end{frame}
+%	
+%	\begin{frame}{Não sincronização com servidores de horário público}
+%		\begin{itemize}
+%		  \item Listas de controle de acesso que não permitem a passagem de pacotes da porta 123 UDP
+%		\item Configuração incorreta nos roteadores, como os comandos clock timezone e clock Summer-time estão ausentes nos roteadores
+%		\item O servidor de tempo público está inoperante
+%		\item O software do servidor NTP em NT ou UNIX está mal configurado
+%		\item Mais tráfego está no roteador e mais tráfego no caminho para o servidor
+%		\item O mestre NTP perdeu a sincronização e o roteador perde a sincronização periodicamente
+%		\item Alto uso de CPU
+%				\end{itemize}
+%		
+%	\end{frame}
+%	\begin{frame}{Problemas envolvendo horário}
+%				
+%		\begin{block}{}
+%			\begin{itemize}
+%			\item Sistemas de arquivos (data de criação/modificação de arquivos(timestamp))
+%			\item Agendadores de eventos(cron)
+%			\item Autenticação
+%			\item Investigação de incidentes
+%			\end{itemize}
+%		\end{block}
+%	\end{frame}
+%	
+%	\begin{frame}
+%	\begin{block}{Atividade}
+%	No que diz a respeito ao NTP do conjunto de protocolos TCP/IP, é correto afirmar que pertence à camada de
+%
+%	
+%	\begin{enumerate}
+%		\item Aplicação e se destina à transferência de notícias para os computadores da rede
+%		\item Aplicação e se destina à sincronização dos relógios dos equipamentos conectados na rede
+%		\item Rede e se destina à sincronização do timestamp dos pacotes transportados na rede
+%		\item Rede e se destina ao envio de notícias e informações entre os roteadores da rede
+%		\item Transporte e se destina ao envio, em tempo real, dos pacotes de dados de chats
+%	
+%	\end{enumerate}
+%	
+%	\end{block}
+%	\end{frame}
+%	\begin{frame}[allowframebreaks]{NTS}
+%	O NTS (Network Time Security) é uma extensão de segurança do NTP. Ele fornece mecanismos para autenticar e criptografar mensagens NTP, garantindo que os dados de horário recebidos sejam seguros e autênticos. O NTS foi projetado para compatibilidade retroativa com a infraestrutura NTP existente. Isso permite a implantação gradual sem exigir mudanças nos servidores NTP existentes que não suportam NTS. 
+%	\framebreak
+%	\begin{itemize}
+%		\item Identidade: usa a estrutura de chaves públicas X.509
+%		\item Autenticação: verifica criptograficamente que a informação de relógio nos
+%pacotes NTP é autêntica, produzida por um servidor identificável.
+%\item Proteção contra ataques de repetição: o cliente pode detectar
+%\item Consistência entre requisições e respostas: o cliente pode verificar
+%\end{itemize}
+%\framebreak
+%\begin{itemize}
+%\item Privacidade: NTS não vaza nenhuma informação que permitiria a um terceiro
+%determinar que dois pacotes vindos de redes diferentes se originaram no mesmo
+%cliente
+%\item Não amplificação: as respostas nunca são maiores do que as requisições
+%\item Escalabilidade: os servidores não guardam estado dos clientes, então podem
+%servir a um grande número
+%\item Desempenho: o NTS não degrada a qualidade da sincronização dos relógios
+%\end{itemize}
+%	\end{frame}
+%	
+%\begin{frame}[allowframebreaks]{NTP e Segurança}
+%	Segurança não era uma preocupação na correta sincronização dos relógios no passado
+%	\begin{block}{Mas muita coisa mudou}
+%		\begin{itemize}
+%			\item a Internet cresceu e se descentralizou
+%			\item há muitas evidências de um tratamento inadequado da segurança no NTP
+%			\item há um interdependência crescente entre o registro do tempo e a segurança
+%			\item há requisitos legais e de conformidade
+%		\end{itemize}
+%	\end{block}
+%	\framebreak
+%\begin{itemize}	
+%	\item Falhas no software ou na configuração
+%	\item o ntpd é um dinossauro, gigante, com suporte a uma miríade de hardwares e sistemas, as opções padrão não são as mais seguras
+%	\item Falhas no protocolo
+%	\item Falta de mecanismos adequados de segurança
+%\end{itemize}
+%\end{frame}
+%
+%
+%\begin{frame}{Certificados TLS}
+%O TLS é usado para estabelecer conexões seguras e autenticadas na Internet
+%\begin{block}{heartbleed}
+% Se um ataque NTP conseguir fazer um cliente voltar no tempo, ele pode aceitar certificados fraudados. Por exemplo certificados emitidos antes de 2014 com a falha do heartbleed.
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{DNSSEC}
+%O DNSSEC provê autenticação para o sistema de nomes. 
+%\begin{block}{atacado}
+%Se um resolver está configurado pra fazer ``strict validation", ou seja, não responde se as queries falham a validação do DNSSEC, então um ataque NTP que leva o resolver para frente no tempo pode fazer com que todos os certificados e chaves expirem. Um ataque NTP que leve para o passado pode permitir ataques de repetição.
+%\end{block}
+%
+%\end{frame}
+%
+%\begin{frame}{Instalação e configuração do servidor}
+%\begin{itemize}
+%\item chrony
+%\item ntpsec
+%\item openntpd
+%\end{itemize}
+%
+%\end{frame}
+%	
+	
+%	\begin{frame}[allowframebreaks]{Referências Bibliográficas}
+%		\bibitem{noauthor_undated-xq}
+%NTP.br. \url{https://ntp.br/conteudo/ntp/}. Acessado em: 6 de agosto de 2026.
+%
+%\bibitem{Cisco_System_Inc2022-gp}
+%Cisco System, Inc. (2022). Identificar e Solucionar Problemas do Network Time Protocol (NTP). 26 de setembro de 2022.
+%
+%\bibitem{ibm}
+%IBM. (2025). Tivoli Application Dependency Discovery Manager. \url{https://www.ibm.com/docs/pt-br/taddm/7.3.0?topic=problems-synchronization-server}. Acessado em: 6 de agosto de 2026.
+%
+%\bibitem{cisco}
+%Cisco. (2025). Use as práticas recomendadas para o Network Time Protocol. \url{https://www.cisco.com/c/pt_br/support/docs/availability/high-availability/19643-ntpm.html}. Acessado em: 6 de agosto de 2026.
+%
+%\bibitem{suse}
+%SUSE. (2026). Sincronizando o horário por meio de NTP/NTS. \url{https://documentation.suse.com/pt-br/sle-micro/6.1/html/Micro-ntp-time-synchronization/index.html}. Acessado em: 6 de agosto de 2026.
+%
+%\bibitem{Moreiras2021}
+%Moreiras, Antonio Marcos. (2021). NTP e NTS de Forma Correta e Segura, Sincronismo de Tempo na Internet. Nic.br. \url{https://bibliotecadigital.acervo.nic.br/server/api/core/bitstreams/129d1169-25b5-49ce-b015-28ffadc440da/content}. Acessado em: 6 de agosto de 2026.
+%	\end{frame}	
+	
+\end{document}
