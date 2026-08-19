@@ -2,7 +2,7 @@
 \begin{document}
 	
 	\title[Campus Formoso do Araguaia]{Configuração de Redes e Servidores}
-	\subtitle{Aula 2 }
+	\subtitle{Aula 2}
 	\author{Gilmar Gomes do Nascimento}
 	\institute[IFTO]{
 		Instituto Federal do Tocantins\\
@@ -26,12 +26,49 @@
 		\end{figure}
 	\end{frame}
 
+	\begin{frame}{Tipos de Impressoras}
+		\begin{itemize}
+			\item Impressora de impacto(Matricial, margarida)
+			\item Impressora de jato de tinta
+			\item Impressoara a laser
+			\item Impressora térmica
+			\item Impressora solvente
+		\end{itemize}		
+	\end{frame}
+
+	\begin{frame}{Drivers}
+		\begin{figure}
+			\includegraphics[scale=1]{driver-printer}
+		\end{figure}		
+	\end{frame}
+
+	\begin{frame}{Terceirização de serviços}
+		\textit{Outsourcing} é o termo referente à prática de negócio onde há a terceirização dos serviços relacionados
+		à Tecnologia da Informação (TI). A terceirização relativa à área tecnológica consiste no processo de 
+		externalização da gestão e controle de processos, além de serviços oferecidos por uma empresa privada ou governamental.		
+	\end{frame}
+
+	\begin{frame}{Guia de Boas Práticas para a Contratação do Serviço de Outsourcing de Impressão}
+		\begin{figure}
+			\includegraphics[scale=1]{gov-outsourcing-printing}
+		\end{figure}
+	\end{frame}
+
 	\begin{frame}{Servidor de Impressão}
 		\begin{itemize}
 			\item MS Windows
 			\item Apple
 			\item GNU\Linux
 		\end{itemize}		
+	\end{frame}
+
+	\begin{frame}{Impressoras e marcas}
+		\begin{itemize}
+			\item Xerox
+			\item HP 
+			\item Samsung
+			\item Kyocera
+		\end{itemize}
 	\end{frame}
 
 	\begin{frame}[allowframebreaks]{Kyocera Print Center}
@@ -44,7 +81,7 @@
 			\item Selecionar ou criar modelos com linhas para imprimir
 			\item Definir configurações avançadas de impressora para KYOCERA as impressoras
 			\item Especificar as pastas da Biblioteca do driver que as configurações de impressão avançadas podem acessar para
-			 imagens de marca d'água, arquivos de perfil do driver e a impressão salva
+			 imagens de marca d`água, arquivos de perfil do driver e a impressão salva
 		\end{itemize}
 		\framebreak
 		A digitalização só tem suporte via rede. Especificamente, seu computador deve estar na mesma rede IPv4 que o dispositivo
@@ -68,7 +105,7 @@
 	\end{frame}
 	
 	\begin{frame}[allowframebreaks]{Print Spooler}
-		O  Print Spooler é um software integrado ao sistema operacional Windows que armazena temporariamente os trabalhos de impressão 
+		O Print Spooler é um software integrado ao sistema operacional Windows que armazena temporariamente os trabalhos de impressão 
 		na memória do computador até que a impressora esteja pronta para imprimi-los. Esse serviço faz o spool de trabalhos de impressão
 		e trata das interações com a impressora. Se você desativar esse serviço, não poderá imprimir ou ver	suas impressoras.
 	\framebreak
@@ -182,6 +219,32 @@
 
 \end{frame}
 
+\begin{frame}{CUPS compatibilidade}
+	CUPS funciona/compatível com:
+\begin{itemize}
+	\item AirPrint$^{TM}$ and IPP Everywhere$^{TM}$ printers
+	\item Network and local (USB) printers with Printer Applications 
+	\item Network and local (USB) printers with (legacy) PPD-based printer drivers.
+\end{itemize}	
+\end{frame}
+
+\begin{frame}{Instalação no Debian (máquina virtual)}
+\begin{center}
+	\texttt{sudo apt install cups -y}
+\end{center}
+\end{frame}
+
+\begin{frame}{Interface web}
+	\begin{figure}
+		\includegraphics[scale=1]{cups-web}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Gerenciamento de serviços}
+		\begin{figure}
+			\includegraphics[scale=1]{System-Ctl-CUPS}
+		\end{figure}
+\end{frame}
 
 \begin{frame}[allowframebreaks]{Referências Bibliográficas}
 		\bibitem{noauthor_undated-xq}
@@ -201,6 +264,6 @@
 
 		\bibitem{Moreiras2021}
 		Moreiras, Antonio Marcos. (2021). NTP e NTS de Forma Correta e Segura, Sincronismo de Tempo na Internet. Nic.br. \url{https://bibliotecadigital.acervo.nic.br/server/api/core/bitstreams/129d1169-25b5-49ce-b015-28ffadc440da/content}. Acessado em: 6 de agosto de 2026.
-			\end{frame}	
+\end{frame}	
 	
 \end{document}
