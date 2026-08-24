@@ -62,38 +62,186 @@
 			\end{figure}
 		\framebreak
 		\begin{block}{Squid: Otimizando a entrega}
-			Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. 
-			It reduces bandwidth and improves response times by caching and reusing 
-			frequently-requested web pages. Squid has extensive access controls and makes
-			a great server accelerator. It runs on most available operating systems, including 
-			Windows and is licensed under the GNU GPL.			
+			Squid é um proxy de cache que suporta os protocolos HTTP, HTTPS, FTP e outros. Reduz 
+			a largura de banda e melhora os tempos de resposta através do armazenamento em cache e 
+			da reutilização de páginas frequentemente solicitadas. O Squid dispões de controles de acesso
+			abrangentes e constitui de um excelente acelerador de servidores. Funciona na maioria dos
+			sistemas operacionais, incluindo Microsoft Windows e é GNU GPL.
 		\end{block}
 		\framebreak
 
-		\begin{block}{Making the most of your Internet Connection}
-			Squid is used by hundreds of Internet Providers world-wide to provide their users
-			 with the best possible web access. Squid optimises the data flow between client 
-			 and server to improve performance and caches frequently-used content to save 
-			 bandwidth. Squid can also route content requests to servers in a wide variety of 
-			 ways to build cache server hierarchies which optimise network throughput.			
+		\begin{block}{Aproveitando ao máximo sua conexão com a Internet}
+			Squid é utilizado por centenas de fornecedores de serviços de Internet para otimizar
+			o fluxo de dados entre o cliente e servidor, melhorando o desempenho e armazenamento 
+			em cache de conteúdos utilizados com frequência para poupar largura de banda.		
 		\end{block}
 
 		\framebreak
 
-		\begin{block}{Website content acceleration and Distribution}
-			Thousands of web-sites around the Internet use Squid to drastically increase their
-			content delivery. Squid can reduce your server load and improve delivery speeds 
-			to clients. Squid can also be used to deliver content from around the world -
-			copying only the content being used, rather than inefficiently copying everything.
-			Finally, Squid's advanced content routing configuration allows you to build content 
-			clusters to route and load balance requests via a variety of web servers.			
+		\begin{block}{Aceleração e distribuição de conteúdo}
+			Milhares de sites utilizam o Squid para aumentar drasticamente a entrega dos conteúdos. 
+			O Squid pode reduzir a carga e melhorar a velocidade de entrega aos clientes, copiando
+			apenas os conteúdos que estão a ser utilizados, em vez de copiar tudo de forma ineficiente.
+
+			Por fim, a configuração avançada de encaminhamento de conteúdos do Squid permite-lhe criadores
+			clusters de conteúdos para encaminhar e equilibrar a carga de pedidos através de uma variedade
+			de servidores web.
 		\end{block}			
 		\end{frame}
+		\begin{frame}{Por que usar Squid?}
+			\begin{block}{Crescimento exponencial}
+			Os criadores do protocolo HTTP identificaram o crescimento exponencial e preocupados com o mecanismo de distribuição, adicionaram poderas
+			primtivas de armazenamento em cache. 
+			\begin{itemize}
+				\item Validado
+				\item Revalidado
+				\item Armazenado
+			\end{itemize}
+			\end{block}
+			\begin{block}{Navegadores}
+				As páginas são guardadas localmente para evitar consultas constantes à rede(especialmente úteis quando se navega por páginas estáticas)
+			\end{block}
+			\begin{block}{Redes de computadores}
+				Por meio de um software que compartilha a conexão ou link, software este também chamado de proxy, que tem por função rotear as requisições
+				a IPs externos à rede que se encontra. Os proxys têm capacidade de caching: ao armazenar o conteúdo de páginas web já visitadas pelos 
+				usuários da rede na qual faz parte e fornecer esse conteúdo às novas requisições, minimizam o consumo da largura de banda e agilizam a
+				navegação.				
+			\end{block}
 
+			\framebreak
+
+			\begin{block}{Economizar banda e melhorar experiência do usuário}
+				Squid allows Internet Providers to save on their bandwidth through content caching. Cached 
+				content means data is served locally and users will see this through faster download speeds 
+				with frequently-used content.
+
+				A well-tuned proxy server (even without caching!) can improve user speeds purely by optimising
+				 TCP flows. Its easy to tune servers to deal with the wide variety of latencies found on the 
+				 internet - something that desktop environments just aren't tuned for.
+				Squid allows ISPs to avoid needing to spend large amounts of money on upgrading core equipment
+				and transit links to cope with ever-demanding content growth. It also allows ISPs to prioritise
+				 and control certain web content types where dictacted by technical or economic reasons.				
+			\end{block}
+			\framebreak
+			\begin{block}{Escalar a aplicação web}
+				Squid é um dos mais antigos aceleradores de conteúdo, utilizado por milhares de sites em todo o mundo
+				para aliviar a carga nos servidores. O conteúdo acessado com frequência é armazenado em cache
+				pelo Squid e fornecido ao cliente final com apenas uma fração da carga que o servidor de aplicativos 
+				normalmente precisaria suportar. 
+			\end{block}
+			\framebreak
+			\begin{block}{CDN}
+				Squid facilita a distribuição de conteúdo por distribuidores de conteúdo e desenvolvedores de mídia de
+				streaming em todo o mundo. 
+				\begin{quotation}
+					 CDN(Content Delivery Network) é uma rede de servidores interligados com o objetivo de fornecer conteúdo da forma mais rápida,
+					 barata, confiável e segura possível. Para aumentar a velocidade e aprimorar a conectividade, uma
+					  CDN coloca servidores nos pontos de troca de tráfego entre redes diferentes. 
+				\end{quotation}				
+			\end{block}			
+		\end{frame}
+
+
+
+		\begin{frame}{O interceptador: O papel do Proxy}
+			\begin{block}{Definição técnica}
+				Atua como um intermediário( ``Man-in-the-middle'' entre o navegador e o servidor da aplicação web)				
+			\end{block}
+
+			\begin{block}{Tempo real}
+				Permite interceptar, visualizar e modificar requisições e respostas HTTP/s em tempo real, antes que
+				chegem ao destino.
+
+				\begin{quotation}
+					``Imagine um posto de controle alfandegário onde pode parar cada pacote, abrir, ler o conteúdo
+					e até alterá-lo antes de deixá-lo seguir viagem"
+				\end{quotation}
+				
+			\end{block}
+		\end{frame}
+
+		\begin{frame}{Hands-on ZAP}
+			\huge \url{http://testphp.vulnweb.com}
+
+			\begin{block}{Analise os resultados na aba Alerts}
+				\begin{itemize}
+					\item High
+					\item Medium
+					\item Low
+				\end{itemize}
+				
+			\end{block}
+			
+		\end{frame}
+
+		\begin{frame}{CTF -- Encontrando a bandeira com o OWASP ZAP}
+			Acesse e salve o arquivo como desafio.html 
+
+			\url{pad.riseup.net/p/owasp-ifto}
+			
+		\end{frame}
+
+		\begin{frame}{Python}
+			%python -m http.server 8000
+			\begin{frame}
+				\includegraphics[scale=1]{python-server}
+			\end{frame}			
+		\end{frame}
+
+		\begin{frame}{Passos}
+			\begin{block}{Inicie o OWASP ZAP}
+				\url{127.0.0.1:8080}				
+			\end{block}
+			\begin{block}{Configure o proxy no Firefox}
+				\begin{enumerate}
+					\item No menu do Firefox, vá em Configurações $\rightarrow$ Geral
+					\item Role a página até o final e na seção Configurações de rede, clique em Configurar conexão $\ldots$
+					\item Selecione a opção \textbf{Configuração manual de proxy}
+					\item No campo \textbf{Proxy HTTP}, digite 127.0.0.1 e no campo \textbf{Porta} informe 8080
+					\item Marque a opção \textbf{Também usar este proxy para HTTPS} garantindo que o tráfego criptografado seja interceptado. 
+					\item Clique em OK
+				\end{enumerate}
+				
+			\end{block}
+		\end{frame}
+
+		\begin{frame}{No Firefox}
+			\includegraphics[scale=1]{firefox-proxy}
+			
+		\end{frame}
+
+
+		\begin{frame}{Acesse a aplicação}
+
+			\url{http://localhost:8000/desafio.html}
+		\end{frame}
+
+		\begin{frame}{Intercepte a requisição}
+			\begin{figure}
+				\includegraphics[scale=0.5]{zap-manual-explorer}
+			\end{figure}
+		\end{frame}
+
+		\begin{frame}{Analise a resposta no ZAP}
+			\begin{block}{Ponto de vista do ZAP}
+				\begin{enumerate}
+					\item Observe a árvore de sites no painel à esquerda e localize o endereço do arquivo local
+					\item Clique sobre ele para visualizar os detalhes da requisição
+					\item Na janela superior direita(Request/Response) selecione a aba Response
+				\end{enumerate}				
+			\end{block}			
+		\end{frame}
+
+		\begin{frame}{Encontre a bandeira}
+			\begin{figure}
+				\includegraphics[scale=0.6]{zap-bandeira}
+			\end{figure}
+			
+		\end{frame}
 		\begin{frame}{Hands-on}
 			\begin{enumerate}
 				\item Instale o Squid-cache na máquina virtual
-				\item Mostre-me os status: funcionando, parado. 
+				\item Mostre-me as ações do serviço (squid)
 				\item Configure para que não seja possível abrir nenhuma página com o domínio .bet na máquina virtual
 			\end{enumerate}
 			
