@@ -1,0 +1,68 @@
+<!-- 
+    Arquivo: desafio.html 
+    Descrição: Página simples para o Desafio 0 do minicurso de CTF. 
+    Objetivo: Encontrar a flag escondida no código-fonte. 
+--> 
+
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Desafio CTF 0 - Aquecimento</title> 
+
+    <style> 
+        /* Dica: Às vezes, os estilos também contam histórias... */ 
+
+        body { 
+            font-family: 'Courier New', Courier, monospace; 
+            background-color: #0a0a1a; 
+            color: #00ff41; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+
+        .container { 
+            text-align: center; 
+            padding: 2em; 
+            border: 1px solid #00ff41; 
+            background-color: #1a1a2e; 
+            box-shadow: 0 0 15px #00ff41; 
+        } 
+
+        h1 { 
+            text-shadow: 0 0 5px #00ff41; 
+        } 
+
+        /* A flag não está aqui, continue procurando! */ 
+    </style> 
+</head> 
+
+<body> 
+
+    <div class="container"> 
+        <h1>Bem-vindo ao Desafio de Aquecimento!</h1> 
+        <p>Sua missão é encontrar a flag escondida no código-fonte desta página.</p> 
+        <p>Use o OWASP ZAP para inspecionar a resposta do servidor.</p> 
+
+        <!-- Parabéns por olhar aqui! Mas a flag está um pouco mais escondida. --> 
+    </div> 
+
+    <script> 
+        // Scripts são um ótimo lugar para esconder segredos, não acha? 
+
+        function init() { 
+            const segredo = { 
+                dica: "A flag está em um formato que o ZAP consegue encontrar facilmente.", 
+                flag: "CTF{f0nt3_hTmL_3_s3u_m4p4}" 
+            };
+            console.log("O sistema foi inicializado, mas a flag não está no console. Continue procurando!"); 
+        } 
+        init(); 
+    </script> 
+
+</body> 
+</html> 

@@ -22,7 +22,8 @@
 	
 	\begin{frame}{Catch the flag (Capture a bandeira)}
 		\begin{figure}
-			\includegraphics[scale=1]{ctf}
+			\includegraphics[scale=0.75]{ctf}
+		\end{figure}
 	\end{frame}
 	
 	\begin{frame}{Desafios}
@@ -67,25 +68,26 @@
 		\end{enumerate}
 	\end{frame}
 
-	\begin{frame}[allowframebreaks]{OWASP}
-		Open Web Application Security Project (OWASP) é uma comunidade on-line global e sem fins lucrativos que produz artigos,
-		 metodologias, documentação, ferramentas e tecnologias de forma livre e aberta no campo da segurança de aplicações web.
+	\begin{frame}{OWASP}
+		Open Web Application Security Project (OWASP) é uma comunidade on-line global e sem fins lucrativos que produz artigos,  metodologias, documentação, ferramentas e tecnologias de forma livre e aberta no campo da segurança de aplicações web.
 
-		 \framebreak
-		 \begin{block}{Categorias}
+	\end{frame}
+		 \begin{frame}[allowframebreaks]{Categorias}
 			\begin{itemize}
 				\item A01: Controle de acesso quebrado (Broken Access Control)
 				\item A02: Configuração incorreta de segurança (Security Misconfiguration)
 				\item A03: Falhas na cadeia de suprimentos de software (Software Supply Chain Failures)
 				\item A04: Falhas criptográficas (Cryptographic Failures)
 				\item A05: Injeção (Injection)
+			\end{itemize}
+		\framebreak
+			\begin{itemize}
 				\item A06: Design inseguro (Insecure Design)
 				\item A07: Falhas de autenticação (Authentication Failures)
 				\item A08: Falhas de integridade de software ou dados (Software or Data Integrity Failures)
 				\item A09: Falhas de logs de segurança e alerta(Security Logging and Alerting Failures)
 				\item A10: Manuseio incorreto de condições excepcionais (Mishandling of Exceptional Conditions)
 			\end{itemize}
-		\end{block}
 		\framebreak
 		\begin{block}{A01: Controle de acesso quebrado (Broken Access Control)}
 		Ocorre quando as restrições sobre o que os usuários autenticados podem fazer não são aplicadas
@@ -143,7 +145,6 @@
 		  vazamento de informações ou negação de serviço.
 		\end{block}
 		
-		\framebreak
 	\end{frame}
 
 \begin{frame}{O papel do Proxy}
@@ -151,45 +152,49 @@
 		Atua como um intermediário (``Man-in-the-Middle") entre o navegador e o servidor da aplicação web.
 	\end{block}
 	\begin{block}{Interceptar}
-		O Proxy permite interceptar, visualizar e modificar requisições e respostas HTTPs em tempo real, antes que 
-		cheguem ao destino.
+		O Proxy permite interceptar, visualizar e modificar requisições e respostas HTTPs em tempo real, antes que cheguem ao destino.
 	\end{block}
 \end{frame}
 
 \begin{frame}{Ferramentas}
-\begin{block}{Na unha}
-	O processo de desenvolvimento de código requer técnicas e ferramentas, arcabouços, APIs e diversas bibliotecas, técnicas
-de PENTEST idem. É possível criar códigos sem ferramentas? sim, contudo costuma ser bem mais complexo e demorado. \end{block}
-\begin{itemize}
-	\item OWASP ZAP
-	\item BURP
+	\begin{block}{Na unha}
+		O processo de desenvolvimento de código requer técnicas e ferramentas, arcabouços, APIs e 				diversas bibliotecas, técnicas
+		de PENTEST idem. É possível criar códigos sem ferramentas? sim, contudo costuma ser bem mais 			complexo e demorado. 
+	\end{block}
+	\begin{itemize}
+		\item OWASP ZAP
+		\item BURP
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{OWASP ZAP}
 	\begin{figure}
-		\includegraphics{scale=0.5}[owasp]
-	\end{frame}
+		\includegraphics[scale=0.5]{owasp-zap}
+	\end{figure}
 \end{frame}
 
 
-%	\begin{frame}[allowframebreaks]{Referências Bibliográficas}
-%		\bibitem{noauthor_undated-xq}
-%NTP.br. \url{https://ntp.br/conteudo/ntp/}. Acessado em: 6 de agosto de 2026.
-%
-%\bibitem{Cisco_System_Inc2022-gp}
-%Cisco System, Inc. (2022). Identificar e Solucionar Problemas do Network Time Protocol (NTP). 26 de setembro de 2022.
-%
-%\bibitem{ibm}
-%IBM. (2025). Tivoli Application Dependency Discovery Manager. \url{https://www.ibm.com/docs/pt-br/taddm/7.3.0?topic=problems-synchronization-server}. Acessado em: 6 de agosto de 2026.
-%
-%\bibitem{cisco}
-%Cisco. (2025). Use as práticas recomendadas para o Network Time Protocol. \url{https://www.cisco.com/c/pt_br/support/docs/availability/high-availability/19643-ntpm.html}. Acessado em: 6 de agosto de 2026.
-%
-%\bibitem{suse}
-%SUSE. (2026). Sincronizando o horário por meio de NTP/NTS. \url{https://documentation.suse.com/pt-br/sle-micro/6.1/html/Micro-ntp-time-synchronization/index.html}. Acessado em: 6 de agosto de 2026.
-%
-%\bibitem{Moreiras2021}
-%Moreiras, Antonio Marcos. (2021). NTP e NTS de Forma Correta e Segura, Sincronismo de Tempo na Internet. Nic.br. \url{https://bibliotecadigital.acervo.nic.br/server/api/core/bitstreams/129d1169-25b5-49ce-b015-28ffadc440da/content}. Acessado em: 6 de agosto de 2026.
-%	\end{frame}	
+	\begin{frame}[allowframebreaks]{Referências Bibliográficas}
+		\begin{thebibliography}{9}
+
+		\bibitem{noauthor_undated-xq}
+NTP.br. \url{https://ntp.br/conteudo/ntp/}. Acessado em: 6 de agosto de 2026.
+
+\bibitem{Cisco_System_Inc2022-gp}
+Cisco System, Inc. (2022). Identificar e Solucionar Problemas do Network Time Protocol (NTP). 26 de setembro de 2022.
+
+\bibitem{ibm}
+IBM. (2025). Tivoli Application Dependency Discovery Manager. \url{https://www.ibm.com/docs/pt-br/taddm/7.3.0?topic=problems-synchronization-server}. Acessado em: 6 de agosto de 2026.
+
+\bibitem{cisco}
+Cisco. (2025). Use as práticas recomendadas para o Network Time Protocol. \url{https://www.cisco.com/c/pt_br/support/docs/availability/high-availability/19643-ntpm.html}. Acessado em: 6 de agosto de 2026.
+
+\bibitem{suse}
+SUSE. (2026). Sincronizando o horário por meio de NTP/NTS. \url{https://documentation.suse.com/pt-br/sle-micro/6.1/html/Micro-ntp-time-synchronization/index.html}. Acessado em: 6 de agosto de 2026.
+
+\bibitem{Moreiras2021}
+Moreiras, Antonio Marcos. (2021). NTP e NTS de Forma Correta e Segura, Sincronismo de Tempo na Internet. Nic.br. \url{https://bibliotecadigital.acervo.nic.br/server/api/core/bitstreams/129d1169-25b5-49ce-b015-28ffadc440da/content}. Acessado em: 6 de agosto de 2026.
+\end{thebibliography}
+	\end{frame}	
 	
 \end{document}

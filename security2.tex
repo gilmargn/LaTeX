@@ -19,14 +19,36 @@
 		\begin{frame}
 			\titlepage
 		\end{frame}
+% ============================================================
+% PARTE 1 – FUNDAMENTAÇÃO TEÓRICA (O QUE É PROXY?)
+% ============================================================
 
-		\begin{frame}{Definição de Proxy}
-			Um proxy (em português `procurador', `representante') é um servidor (um sistema
+\begin{frame}{Revisão: O que é Proxy?}
+	\begin{block}{Definição}
+		Atua como um intermediário (``Man-in-the-Middle") entre o navegador e o servidor da aplicação web.
+	\end{block}
+	\begin{block}{Interceptação}
+		Permite interceptar, visualizar e modificar requisições e respostas HTTPs em tempo real.
+	\end{block}
+\end{frame}
+\begin{frame}
+	\begin{block}{Hoje vamos aprofundar...}
+		\begin{itemize}
+			\item Tipos de proxy e seus usos
+			\item ZAP como proxy de segurança (prática)
+			\item Squid como proxy de infraestrutura (teoria + prática)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{Definição de Proxy}
+			Um proxy (em português `procurador`, `representante') é um servidor (um sistema
 			de computador ou uma aplicação) que age como um intermediário para requisições de
 			clientes solicitando recursos de outros servidores
 
 			\begin{figure}
-				\includegraphics[scale=1]{proxy-example}
+				\includegraphics[scale=.5]{proxy-example}
 				% converter webp para png
 			\end{figure}			
 		\end{frame}
@@ -36,12 +58,12 @@
 			conexão, página web ou outros recursos disponíveis de um servidor diferente, e o proxy
 			avalia a solicitação como um meio de simplificar e controlar sua complexidade.			
 		\end{frame}
-		
 
 		\begin{frame}[allowframebreaks]{Servidor de Proxy}
 			 Os proxies foram inventados para adicionar estrutura e encapsulamento aos sistemas 
 			 distribuídos. Esses servidores têm uma série de usos, como filtrar conteúdo,
 			  providenciar anonimato, entre outros.
+			  
 			\framebreak
 			Um servidor proxy pode, opcionalmente, alterar a requisição do cliente ou a resposta 
 			do servidor e, algumas vezes, pode disponibilizar este recurso mesmo sem se conectar 
@@ -52,105 +74,18 @@
 			\framebreak
 
 			\begin{figure}
-				\includegraphics[scale=0.6]{settings-proxy}
+				\includegraphics[scale=0.45]{settings-proxy}
 			\end{figure}		
 		\end{frame}
-		
-		\begin{frame}[allowframebreaks]{Squid Proxy Server}
-			\begin{figure}
-				\includegraphics[scale=1]{squid-cache}
-			\end{figure}
-		\framebreak
-		\begin{block}{Squid: Otimizando a entrega}
-			Squid é um proxy de cache que suporta os protocolos HTTP, HTTPS, FTP e outros. Reduz 
-			a largura de banda e melhora os tempos de resposta através do armazenamento em cache e 
-			da reutilização de páginas frequentemente solicitadas. O Squid dispões de controles de acesso
-			abrangentes e constitui de um excelente acelerador de servidores. Funciona na maioria dos
-			sistemas operacionais, incluindo Microsoft Windows e é GNU GPL.
-		\end{block}
-		\framebreak
-
-		\begin{block}{Aproveitando ao máximo sua conexão com a Internet}
-			Squid é utilizado por centenas de fornecedores de serviços de Internet para otimizar
-			o fluxo de dados entre o cliente e servidor, melhorando o desempenho e armazenamento 
-			em cache de conteúdos utilizados com frequência para poupar largura de banda.		
-		\end{block}
-
-		\framebreak
-
-		\begin{block}{Aceleração e distribuição de conteúdo}
-			Milhares de sites utilizam o Squid para aumentar drasticamente a entrega dos conteúdos. 
-			O Squid pode reduzir a carga e melhorar a velocidade de entrega aos clientes, copiando
-			apenas os conteúdos que estão a ser utilizados, em vez de copiar tudo de forma ineficiente.
-
-			Por fim, a configuração avançada de encaminhamento de conteúdos do Squid permite-lhe criadores
-			clusters de conteúdos para encaminhar e equilibrar a carga de pedidos através de uma variedade
-			de servidores web.
-		\end{block}			
-		\end{frame}
-		\begin{frame}{Por que usar Squid?}
-			\begin{block}{Crescimento exponencial}
-			Os criadores do protocolo HTTP identificaram o crescimento exponencial e preocupados com o mecanismo de distribuição, adicionaram poderas
-			primtivas de armazenamento em cache. 
-			\begin{itemize}
-				\item Validado
-				\item Revalidado
-				\item Armazenado
-			\end{itemize}
-			\end{block}
-			\begin{block}{Navegadores}
-				As páginas são guardadas localmente para evitar consultas constantes à rede(especialmente úteis quando se navega por páginas estáticas)
-			\end{block}
-			\begin{block}{Redes de computadores}
-				Por meio de um software que compartilha a conexão ou link, software este também chamado de proxy, que tem por função rotear as requisições
-				a IPs externos à rede que se encontra. Os proxys têm capacidade de caching: ao armazenar o conteúdo de páginas web já visitadas pelos 
-				usuários da rede na qual faz parte e fornecer esse conteúdo às novas requisições, minimizam o consumo da largura de banda e agilizam a
-				navegação.				
-			\end{block}
-
-			\framebreak
-
-			\begin{block}{Economizar banda e melhorar experiência do usuário}
-				Squid allows Internet Providers to save on their bandwidth through content caching. Cached 
-				content means data is served locally and users will see this through faster download speeds 
-				with frequently-used content.
-
-				A well-tuned proxy server (even without caching!) can improve user speeds purely by optimising
-				 TCP flows. Its easy to tune servers to deal with the wide variety of latencies found on the 
-				 internet - something that desktop environments just aren't tuned for.
-				Squid allows ISPs to avoid needing to spend large amounts of money on upgrading core equipment
-				and transit links to cope with ever-demanding content growth. It also allows ISPs to prioritise
-				 and control certain web content types where dictacted by technical or economic reasons.				
-			\end{block}
-			\framebreak
-			\begin{block}{Escalar a aplicação web}
-				Squid é um dos mais antigos aceleradores de conteúdo, utilizado por milhares de sites em todo o mundo
-				para aliviar a carga nos servidores. O conteúdo acessado com frequência é armazenado em cache
-				pelo Squid e fornecido ao cliente final com apenas uma fração da carga que o servidor de aplicativos 
-				normalmente precisaria suportar. 
-			\end{block}
-			\framebreak
-			\begin{block}{CDN}
-				Squid facilita a distribuição de conteúdo por distribuidores de conteúdo e desenvolvedores de mídia de
-				streaming em todo o mundo. 
-				\begin{quotation}
-					 CDN(Content Delivery Network) é uma rede de servidores interligados com o objetivo de fornecer conteúdo da forma mais rápida,
-					 barata, confiável e segura possível. Para aumentar a velocidade e aprimorar a conectividade, uma
-					  CDN coloca servidores nos pontos de troca de tráfego entre redes diferentes. 
-				\end{quotation}				
-			\end{block}			
-		\end{frame}
-
-
 
 		\begin{frame}{O interceptador: O papel do Proxy}
 			\begin{block}{Definição técnica}
-				Atua como um intermediário( ``Man-in-the-middle'' entre o navegador e o servidor da aplicação web)				
+				Atua como um intermediário (``Man-in-the-middle'' entre o navegador e o servidor da aplicação web)				
 			\end{block}
 
 			\begin{block}{Tempo real}
 				Permite interceptar, visualizar e modificar requisições e respostas HTTP/s em tempo real, antes que
-				chegem ao destino.
+				cheguem ao destino.
 
 				\begin{quotation}
 					``Imagine um posto de controle alfandegário onde pode parar cada pacote, abrir, ler o conteúdo
@@ -160,8 +95,12 @@
 			\end{block}
 		\end{frame}
 
+% ============================================================
+% PARTE 2 – PROXY PARA SEGURANÇA (OWASP ZAP)
+% ============================================================
+
 		\begin{frame}{Hands-on ZAP}
-			\huge \url{http://testphp.vulnweb.com}
+			\url{http://testphp.vulnweb.com}
 
 			\begin{block}{Analise os resultados na aba Alerts}
 				\begin{itemize}
@@ -183,9 +122,9 @@
 
 		\begin{frame}{Python}
 			%python -m http.server 8000
-			\begin{frame}
-				\includegraphics[scale=1]{python-server}
-			\end{frame}			
+			\begin{figure}
+				\includegraphics[scale=1]{python-server.png}
+			\end{figure}			
 		\end{frame}
 
 		\begin{frame}{Passos}
@@ -206,19 +145,18 @@
 		\end{frame}
 
 		\begin{frame}{No Firefox}
-			\includegraphics[scale=1]{firefox-proxy}
-			
+		\begin{figure}
+			\includegraphics[scale=.4]{firefox-proxy}
+		\end{figure}	
 		\end{frame}
 
-
 		\begin{frame}{Acesse a aplicação}
-
 			\url{http://localhost:8000/desafio.html}
 		\end{frame}
 
 		\begin{frame}{Intercepte a requisição}
 			\begin{figure}
-				\includegraphics[scale=0.5]{zap-manual-explorer}
+				\includegraphics[scale=0.35]{zap-manual-explorer}
 			\end{figure}
 		\end{frame}
 
@@ -227,17 +165,114 @@
 				\begin{enumerate}
 					\item Observe a árvore de sites no painel à esquerda e localize o endereço do arquivo local
 					\item Clique sobre ele para visualizar os detalhes da requisição
-					\item Na janela superior direita(Request/Response) selecione a aba Response
+					\item Na janela superior direita (Request/Response) selecione a aba Response
 				\end{enumerate}				
 			\end{block}			
 		\end{frame}
 
 		\begin{frame}{Encontre a bandeira}
 			\begin{figure}
-				\includegraphics[scale=0.6]{zap-bandeira}
+				\includegraphics[scale=0.5]{zap-bandeira}
 			\end{figure}
 			
 		\end{frame}
+
+% ============================================================
+% PARTE 3 – PROXY PARA INFRAESTRUTURA (SQUID CACHE)
+% ============================================================
+
+		\begin{frame}[allowframebreaks]{Squid Proxy Server}
+			\begin{figure}
+				\includegraphics[scale=.6]{squid-cache}
+			\end{figure}
+		\framebreak
+		\begin{block}{Squid: Otimizando a entrega}
+			Squid é um proxy de cache que suporta os protocolos HTTP, HTTPS, FTP e outros. Reduz 
+			a largura de banda e melhora os tempos de resposta através do armazenamento em cache e 
+			da reutilização de páginas frequentemente solicitadas. O Squid dispõe de controles de acesso
+			abrangentes e constitui um excelente acelerador de servidores. Funciona na maioria dos
+			sistemas operacionais, incluindo Microsoft Windows e é GNU GPL.
+		\end{block}
+		\framebreak
+
+		\begin{block}{Aproveitando ao máximo sua conexão com a Internet}
+			Squid é utilizado por centenas de fornecedores de serviços de Internet para otimizar
+			o fluxo de dados entre o cliente e servidor, melhorando o desempenho e armazenamento 
+			em cache de conteúdos utilizados com frequência para poupar largura de banda.		
+		\end{block}
+
+		\framebreak
+
+		\begin{block}{Aceleração e distribuição de conteúdo}
+			Milhares de sites utilizam o Squid para aumentar drasticamente a entrega dos conteúdos. 
+			O Squid pode reduzir a carga e melhorar a velocidade de entrega aos clientes, copiando
+			apenas os conteúdos que estão a ser utilizados, em vez de copiar tudo de forma ineficiente.
+
+			Por fim, a configuração avançada de encaminhamento de conteúdos do Squid permite-lhe criar
+			clusters de conteúdos para encaminhar e equilibrar a carga de pedidos através de uma variedade
+			de servidores web.
+		\end{block}			
+		\end{frame}
+
+		\begin{frame}{Por que usar Squid?}
+			\begin{block}{Crescimento exponencial}
+			   Os criadores do protocolo HTTP identificaram o crescimento exponencial e, preocupados com o 
+			   mecanismo de distribuição, adicionaram poderosas primitivas de armazenamento em cache. 
+				\begin{itemize}
+					\item Validado
+					\item Revalidado
+					\item Armazenado
+				\end{itemize}
+			\end{block}
+		\end{frame}
+		
+		\begin{frame}
+			\begin{block}{Navegadores}
+				As páginas são guardadas localmente para evitar consultas constantes à rede (especialmente úteis quando se navega por páginas estáticas)
+			\end{block}
+			\begin{block}{Redes de computadores}
+				Por meio de um software que compartilha a conexão ou link, software este também chamado de proxy, que tem por função rotear as requisições
+				a IPs externos à rede da qual faz parte. Os proxies têm capacidade de caching: ao armazenar o conteúdo de páginas web já visitadas pelos 
+				usuários da rede na qual faz parte e fornecer esse conteúdo às novas requisições, minimizam o consumo da largura de banda e agilizam a
+				navegação.				
+			\end{block}
+		\end{frame}
+
+%			\begin{frame}
+%
+%			\begin{block}{Economizar banda e melhorar experiência do usuário}
+%				Squid allows Internet Providers to save on their bandwidth through content caching. Cached 
+%				content means data is served locally and users will see this through faster download speeds 
+%				with frequently-used content.
+%
+%				A well-tuned proxy server (even without caching!) can improve user speeds purely by optimising
+%				 TCP flows. Its easy to tune servers to deal with the wide variety of latencies found on the 
+%				 internet - something that desktop environments just aren't tuned for.
+%				Squid allows ISPs to avoid needing to spend large amounts of money on upgrading core equipment
+%				and transit links to cope with ever-demanding content growth. It also allows ISPs to prioritise
+%				 and control certain web content types where dictated by technical or economic reasons.				
+%			\end{block}
+%			\end{frame}
+			
+		\begin{frame}{Escalar a aplicação web}
+			Squid é um dos mais antigos aceleradores de conteúdo, utilizado por milhares de sites em todo o mundo
+			para aliviar a carga nos servidores. O conteúdo acessado com frequência é armazenado em cache
+			pelo Squid e fornecido ao cliente final com apenas uma fração da carga que o servidor de aplicativos 
+			normalmente precisaria suportar. 
+		\end{frame}
+		
+		\begin{frame}{CDN}
+			Squid facilita a distribuição de conteúdo por distribuidores de conteúdo e desenvolvedores de mídia de
+			streaming em todo o mundo. 
+			\begin{block}{CDN}
+				 CDN (Content Delivery Network) é uma rede de servidores interligados com o objetivo de fornecer conteúdo da forma mais rápida, barata, confiável e segura possível. Para aumentar a velocidade e aprimorar a conectividade, uma CDN coloca servidores nos pontos de troca de tráfego entre redes diferentes. 
+			\end{block}				
+		\end{frame}
+
+% ============================================================
+% PARTE 4 – HANDS-ON SQUID (NA KALI LINUX)
+% ============================================================
+
 		\begin{frame}{Hands-on}
 			\begin{enumerate}
 				\item Instale o Squid-cache na máquina virtual
@@ -246,28 +281,17 @@
 			\end{enumerate}
 			
 		\end{frame}
-
 		
-		
-		\begin{frame}[allowframebreaks]{Referências Bibliográficas}
-			\bibitem{squid-cache}
-	squid-cache.org \url{https://squid-cache.org}. Acessado em: 24 de agosto de 2026.
+\begin{frame}[allowframebreaks]{Referências Bibliográficas}
+	\begin{thebibliography}{9}
+		\bibitem{squid-cache}
+		squid-cache.org. \url{https://squid-cache.org}. Acessado em: 24 de agosto de 2026.
 
-	\bibitem{Proxy-Wikipedia}
-	PROXY. In: WIKIPÉDIA, a enciclopédia livre. Flórida: Wikimedia Foundation, 2024. 
-	Disponível em: \url{https://pt.wikipedia.org/w/index.php?title=Proxy&oldid=68693766}. Acesso em: 24 agosto. 2026.
+		\bibitem{Proxy-Wikipedia}
+		PROXY. In: WIKIPÉDIA, a enciclopédia livre. Flórida: Wikimedia Foundation, 2024. 
+		Disponível em: \url{https://pt.wikipedia.org/w/index.php?title=Proxy&oldid=68693766}. Acesso em: 24 de agosto de 2026.
+	\end{thebibliography}
+\end{frame}		
 
-	\bibitem{ibm}
-	IBM. (2025). Tivoli Application Dependency Discovery Manager. \url{https://www.ibm.com/docs/pt-br/taddm/7.3.0?topic=problems-synchronization-server}. Acessado em: 6 de agosto de 2026.
-
-	\bibitem{cisco}
-	Cisco. (2025). Use as práticas recomendadas para o Network Time Protocol. \url{https://www.cisco.com/c/pt_br/support/docs/availability/high-availability/19643-ntpm.html}. Acessado em: 6 de agosto de 2026.
-
-	\bibitem{suse}
-	SUSE. (2026). Sincronizando o horário por meio de NTP/NTS. \url{https://documentation.suse.com/pt-br/sle-micro/6.1/html/Micro-ntp-time-synchronization/index.html}. Acessado em: 6 de agosto de 2026.
-
-	\bibitem{Moreiras2021}
-	Moreiras, Antonio Marcos. (2021). NTP e NTS de Forma Correta e Segura, Sincronismo de Tempo na Internet. Nic.br. \url{https://bibliotecadigital.acervo.nic.br/server/api/core/bitstreams/129d1169-25b5-49ce-b015-28ffadc440da/content}. Acessado em: 6 de agosto de 2026.
-		\end{frame}	
 		
 	\end{document}
