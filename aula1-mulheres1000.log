@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.2)  31 AUG 2026 23:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.2.2)  1 SEP 2026 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2264,11 +2264,8 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [1
 
 ]
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 64.
-Requested font "[FiraSans-Bold.otf]/OT:script=latn;language=dflt;+pnum;+onum;ma
-pping=tex-text;" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Bold.otf
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
 
@@ -2279,6 +2276,8 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [2
 
 ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
 
@@ -2286,10 +2285,15 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[3
+[3]
+LaTeX Font Info:    Font shape `TU/FiraSans(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 48.
+Requested font "[FiraSans-Bold.otf]/OT:script=latn;language=dflt;+pnum;+onum;ma
+pping=tex-text;" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Bold.otf
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
 
@@ -2297,23 +2301,20 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[4
+[4]
+! Too many }'s.
+\endframe ->\egroup 
+                    \begingroup \def \@currenvir {frame}
+l.63 \end{frame}
+                
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
 
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-Overfull \hbox (1.58997pt too wide) has occurred while \output is active
-[][] 
- []
-
-[5
-
-
-]
 File: revisao-matematica.png Graphic file (type bmp)
 <revisao-matematica.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
 
@@ -2321,11 +2322,17 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6
+[5]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
 
-]
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[6]
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 77.
+(Font)              scaled to size 12.0pt on input line 75.
 Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
 mapping=tex-text;" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
@@ -2341,7 +2348,7 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 
 ]
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 120.
+(Font)              scaled to size 12.0pt on input line 132.
 Requested font "[FiraSans-Regular.otf]/OT:script=latn;language=dflt;+pnum;+onum
 ;+smcp;mapping=tex-text;" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.o
@@ -2453,9 +2460,248 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 
 [17
 
+
+]
+File: flowers.png Graphic file (type bmp)
+<flowers.png>
+Requested font "[lmroman8-regular]:mapping=tex-text;" at 8.0pt
+ -> /usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf
+Requested font "[lmroman6-regular]:mapping=tex-text;" at 6.0pt
+ -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf
+Requested font "cmmi12" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+Requested font "cmmi8" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+Requested font "cmmi6" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+Requested font "cmsy10" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+Requested font "cmsy8" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+Requested font "cmsy6" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+Requested font "cmex10" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+Requested font "cmex8" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+Requested font "cmex7" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+LaTeX Font Info:    Trying to load font information for U+msa on input line 215
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+Requested font "msam10" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+Requested font "msam10" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+Requested font "msam7" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+LaTeX Font Info:    Trying to load font information for U+msb on input line 215
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Requested font "msbm10" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+Requested font "msbm10" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+Requested font "msbm7" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 215.
+Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
+mapping=tex-text;" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
+f
+LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
+(Font)              scaled to size 6.0pt on input line 215.
+Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
+mapping=tex-text;" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
+f
+Requested font "cmr12" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+Requested font "cmr8" at 8.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+Requested font "cmr6" at 6.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+File: peppers.png Graphic file (type bmp)
+<peppers.png>
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[18
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[19
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[20
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[21
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[22
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[23
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[24
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[25
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[26
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[27
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[28
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[29
+
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[30
+
+]
+File: selic.png Graphic file (type bmp)
+<selic.png>
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[31
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[32
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[33
+
 ]
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 145.
+(Font)              scaled to size 24.88pt on input line 317.
 Requested font "[FiraSans-Regular.otf]/OT:script=latn;language=dflt;+pnum;+onum
 ;mapping=tex-text;" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.o
@@ -2484,23 +2730,12 @@ Requested font "cmex10" at 20.74pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 Requested font "cmex10" at 17.28pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145
-.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
 Requested font "msam10" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 Requested font "msam10" at 20.74pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 Requested font "msam10" at 17.28pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Requested font "msbm10" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 Requested font "msbm10" at 20.74pt
@@ -2508,25 +2743,25 @@ Requested font "msbm10" at 20.74pt
 Requested font "msbm10" at 17.28pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 145.
+(Font)              scaled to size 20.74pt on input line 317.
 Requested font "[FiraSans-Regular.otf]/OT:script=latn;language=dflt;+pnum;+onum
 ;mapping=tex-text;" at 20.74pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.o
 tf
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 24.88pt on input line 145.
+(Font)              scaled to size 24.88pt on input line 317.
 Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
 mapping=tex-text;" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
 f
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 20.74pt on input line 145.
+(Font)              scaled to size 20.74pt on input line 317.
 Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
 mapping=tex-text;" at 20.74pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
 f
 LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 17.28pt on input line 145.
+(Font)              scaled to size 17.28pt on input line 317.
 Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
 mapping=tex-text;" at 17.28pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
@@ -2544,69 +2779,7 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[18
-
-]
-Requested font "[lmroman8-regular]:mapping=tex-text;" at 8.0pt
- -> /usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf
-Requested font "[lmroman6-regular]:mapping=tex-text;" at 6.0pt
- -> /usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf
-Requested font "cmmi12" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-Requested font "cmmi8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-Requested font "cmmi6" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-Requested font "cmsy10" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-Requested font "cmsy8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-Requested font "cmsy6" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-Requested font "cmex10" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-Requested font "cmex8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-Requested font "cmex7" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-Requested font "msam10" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msam10" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msam7" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-Requested font "msbm10" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "msbm10" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "msbm7" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 157.
-Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
-mapping=tex-text;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
-f
-LaTeX Font Info:    Font shape `TU/FiraSans(0)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 157.
-Requested font "[FiraSans-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;
-mapping=tex-text;" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/fira/FiraSans-Italic.ot
-f
-Requested font "cmr12" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-Requested font "cmr8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-Requested font "cmr6" at 6.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-Overfull \hbox (1.58997pt too wide) has occurred while \output is active
-[][] 
- []
-
-[19
+[34
 
 ]
 File: logo.jpg Graphic file (type bmp)
@@ -2616,7 +2789,7 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[20
+[35
 
 ]
 File: logo.jpg Graphic file (type bmp)
@@ -2626,7 +2799,17 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[21
+[36
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+Overfull \hbox (1.58997pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[37
 
 
 ]
@@ -2637,7 +2820,7 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[22
+[38
 
 ]
 File: logo.jpg Graphic file (type bmp)
@@ -2647,18 +2830,7 @@ Overfull \hbox (1.58997pt too wide) has occurred while \output is active
 [][] 
  []
 
-[23
-
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-Overfull \hbox (1.58997pt too wide) has occurred while \output is active
-[][] 
- []
-
-[24
+[39
 
 
 ]
@@ -2676,12 +2848,12 @@ Package rerunfilecheck Info: File `aula1-mulheres1000.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51836 strings out of 476191
- 1239531 string characters out of 5812073
- 1824311 words of memory out of 5000000
- 71722 multiletter control sequences out of 15000+600000
+ 51927 strings out of 476191
+ 1241082 string characters out of 5812073
+ 1824995 words of memory out of 5000000
+ 71813 multiletter control sequences out of 15000+600000
  482286 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 142i,15n,136p,453b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 142i,15n,136p,453b,678s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on aula1-mulheres1000.pdf (24 pages).
+Output written on aula1-mulheres1000.pdf (39 pages).
