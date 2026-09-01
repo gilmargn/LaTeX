@@ -54,6 +54,8 @@
 \usepackage{fontspec}  % if using XeLaTeX/LuaLaTeX
 \usepackage{array, booktabs, amsmath, amssymb} % amssymb para símbolos matemáticos
 \usepackage{cellspace}
+\usepackage{verbatim}
+
 \setlength{\cellspacetoplimit}{6pt}
 \setlength{\cellspacebottomlimit}{6pt}
 
