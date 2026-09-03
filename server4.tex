@@ -1,0 +1,143 @@
+\documentclass{if-beamer}
+\begin{document}
+	
+	\title[Campus Formoso do Araguaia]{Configuração de Redes e Servidores}
+	\subtitle{Aula 4 }
+	\author{Gilmar Gomes do Nascimento}
+	\institute[IFTO]{
+		Instituto Federal do Tocantins\\
+		Campus Formoso do Araguaia
+	}
+	\date{\today}
+	\logo{
+		\includegraphics[scale=0.0085]{logo.jpg}
+	}
+	\subject{Servers} % metadata
+	
+	\graphicspath{{figuras/}}
+	%---------------------------------------------------------------------------------
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	
+    \begin{frame}[allowframebreaks]{Squid Proxy Server}
+        \begin{figure}
+            \includegraphics[scale=.6]{squid-cache}
+        \end{figure}
+    \framebreak
+    \begin{block}{Squid: Otimizando a entrega}
+        Squid é um proxy de cache que suporta os protocolos HTTP, HTTPS, FTP e outros. Reduz 
+        a largura de banda e melhora os tempos de resposta através do armazenamento em cache e 
+        da reutilização de páginas frequentemente solicitadas. O Squid dispõe de controles de acesso
+        abrangentes e constitui um excelente acelerador de servidores. Funciona na maioria dos
+        sistemas operacionais, incluindo Microsoft Windows e é GNU GPL.
+    \end{block}
+    \framebreak
+
+    \begin{block}{Aproveitando ao máximo sua conexão com a Internet}
+        Squid é utilizado por centenas de fornecedores de serviços de Internet para otimizar
+        o fluxo de dados entre o cliente e servidor, melhorando o desempenho e armazenamento 
+        em cache de conteúdos utilizados com frequência para poupar largura de banda.		
+    \end{block}
+
+    \framebreak
+
+    \begin{block}{Aceleração e distribuição de conteúdo}
+        Milhares de sites utilizam o Squid para aumentar drasticamente a entrega dos conteúdos. 
+        O Squid pode reduzir a carga e melhorar a velocidade de entrega aos clientes, copiando
+        apenas os conteúdos que estão a ser utilizados, em vez de copiar tudo de forma ineficiente.
+
+        Por fim, a configuração avançada de encaminhamento de conteúdos do Squid permite-lhe criar
+        clusters de conteúdos para encaminhar e equilibrar a carga de pedidos através de uma variedade
+        de servidores web.
+    \end{block}			
+    \end{frame}
+
+    \begin{frame}{Por que usar Squid?}
+        \begin{block}{Crescimento exponencial}
+            Os criadores do protocolo HTTP identificaram o crescimento exponencial e, preocupados com o 
+            mecanismo de distribuição, adicionaram poderosas primitivas de armazenamento em cache. 
+            \begin{itemize}
+                \item Validado
+                \item Revalidado
+                \item Armazenado
+            \end{itemize}
+        \end{block}
+    \end{frame}
+    
+    \begin{frame}
+        \begin{block}{Navegadores}
+            As páginas são guardadas localmente para evitar consultas constantes à rede (especialmente úteis quando se navega por páginas estáticas)
+        \end{block}
+        \begin{block}{Redes de computadores}
+            Por meio de um software que compartilha a conexão ou link, software este também chamado de proxy, que tem por função rotear as requisições
+            a IPs externos à rede da qual faz parte. Os proxies têm capacidade de caching: ao armazenar o conteúdo de páginas web já visitadas pelos 
+            usuários da rede na qual faz parte e fornecer esse conteúdo às novas requisições, minimizam o consumo da largura de banda e agilizam a
+            navegação.				
+        \end{block}
+    \end{frame}
+    \begin{frame}{Hands-on}
+        \begin{enumerate}
+            \item Instale o Squid-cache na máquina virtual
+            \item Mostre-me as ações do serviço (squid)
+            \item Configure para que não seja possível abrir nenhuma página com o domínio .bet na máquina virtual
+        \end{enumerate}
+    \end{frame}
+    
+% =========================================================
+% NGINX
+% ===========================================================
+
+    \begin{frame}{NGINX}
+        \begin{figure}
+           \includegraphics[scale=0.35]{nginx}
+        \end{figure}
+    \end{frame}   
+
+    \begin{frame}[allowframebreaks]{Nginx}
+
+        \begin{quote}
+            nginx (``engine x") is an HTTP web server, reverse proxy, content cache, load balancer, TCP/UDP proxy server, and mail proxy server. Originally 
+            written by Igor Sysoev and distributed under the 2-clause BSD License. Enterprise distributions, commercial support and training are available from F5, Inc.
+        \end{quote}
+
+    \framebreak
+
+        \begin{exampleblock}{Pré-requisitos}
+            \texttt{sudo apt install curl gnupg2 ca-certificates lsb-release debian-archive-keyring -y} 
+        \end{exampleblock}
+        \begin{exampleblock}{Importar e autenticar chaves}
+            \texttt{curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
+    | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null} 
+        \end{exampleblock}
+     \framebreak
+        \begin{exampleblock}{Verificar chaves}
+            \texttt{gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg}
+        \end{exampleblock}
+    
+    \end{frame}
+
+
+
+
+
+    
+% ============================================================
+% REFERÊNCIAS
+% ============================================================
+
+\begin{frame}[allowframebreaks]{Referências}
+	\begin{thebibliography}{9}
+		\bibitem{journald}
+		FREEDESKTOP. \textit{Journald Documentation}. Disponível em: \url{https://www.freedesktop.org/software/systemd/man/latest/systemd-journald.service.html}. Acesso em: 26 de agosto de 2026.
+		
+		\bibitem{rsyslog}
+		RSYSLOG. \textit{Rsyslog Documentation}. Disponível em: \url{https://www.rsyslog.com/doc/}. Acesso em: 26 de agosto de 2026.
+		
+		\bibitem{journalctl}
+		FREEDESKTOP. \textit{journalctl Documentation}. Disponível em: \url{https://www.freedesktop.org/software/systemd/man/latest/journalctl.html}. Acesso em: 26 de agosto de 2026.
+	\end{thebibliography}
+\end{frame}	
+\end{document}
