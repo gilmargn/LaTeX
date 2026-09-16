@@ -1,0 +1,79 @@
+# ============================================
+# CONFIGURAÇÃO BÁSICA DO SQUID
+# ============================================
+
+# Porta que o Squid vai escutar (proxy padrão)
+http_port 3128
+
+# Cache em disco (opcional, mas recomendado)
+cache_dir ufs /var/spool/squid 100 16 256
+
+# ============================================
+# CONFIGURAÇÕES DE DNS
+# ============================================
+
+# Inserir um DNS 
+dns_nameservers 
+
+# Tempo de cache das consultas DNS (em horas)
+positive_dns_ttl 6 hours
+negative_dns_ttl 1 minutes
+
+# ============================================
+# LOGS (para depuração)
+# ============================================
+
+access_log /var/log/squid/access.log
+cache_log /var/log/squid/cache.log
+
+# ============================================
+# ACLs (Access Control Lists)
+# ============================================
+
+# ACL para rede local (permitir acesso apenas da sua rede)
+acl localnet src 192.168.0.0/16     # Rede 192.168.x.x
+acl localnet src 10.0.0.0/8         # Rede 10.x.x.x
+acl localnet src 172.16.0.0/12      # Rede 172.16.x.x a 172.31.x.x
+acl localnet src 127.0.0.1/32       # Localhost
+
+# ACL para sites bloqueados (USANDO dstdomain)
+acl blocked_sites dstdomain "/etc/squid/bloqueados.txt"
+
+# ACL para sites bloqueados por palavra-chave (opcional)
+# acl blocked_keywords url_regex -i "/etc/squid/keywords.txt"
+
+# ACL para portas seguras (HTTPS)
+acl SSL_ports port 443
+acl Safe_ports port 80          # HTTP
+acl Safe_ports port 443         # HTTPS
+acl Safe_ports port 21          # FTP
+acl Safe_ports port 1025-65535  # Portas altas
+
+# ============================================
+# REGRAS DE ACESSO (A ORDEM IMPORTA!)
+# ============================================
+
+# 1º - NEGAR sites bloqueados (ANTES do allow all!)
+http_access deny blocked_sites
+
+# 2º - Permitir requisições para portas seguras
+http_access deny !Safe_ports
+
+# 3º - Permitir acesso da rede local
+http_access allow localnet
+
+# 4º - Permitir localhost (para testes)
+http_access allow localhost
+
+# 5º - NEGAR todo o resto (padrão de segurança)
+http_access deny all
+
+# ============================================
+# CONFIGURAÇÕES ADICIONAIS
+# ============================================
+
+# Não mostrar versão do Squid (segurança)
+httpd_suppress_version_string on
+
+# Timeout de conexão
+connect_timeout 10 seconds
