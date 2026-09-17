@@ -21,11 +21,59 @@
 	\end{frame}
 	
 
-\begin{frame}{BURP SUITE}
+\begin{frame}{Burp Suite}
 	\begin{figure}
-		\includegraphics[scale=0.5]{burp}
+		\includegraphics[scale=0.5]{burpsuite}
 	\end{figure}
 \end{frame}
+
+\begin{frame}{Prepare o ambiente}
+\begin{itemize}
+	\item Abra o Burp Suite.
+	\item Vá para a aba Proxy > Intercept.
+	\item Clique no botão Intercept is on para que ele mude para Intercept is off. Isso permite que o navegador funcione normalmente enquanto o Burp registra todas as requisições no histórico.
+	\item Clique em Open Browser para abrir o navegador integrado do Burp.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Acesse o laboratório e faça o login}
+Nesta etapa, você irá acessar o laboratório da PortSwigger, realizar o login com as credenciais fornecidas e identificar a requisição associada ao acesso à conta.
+
+\begin{block}{Acesso ao endereço do laboratório}
+No navegador do Burp, acesse o endereço do laboratório:
+\url{https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references}
+\end{block}
+
+\begin{block}{Inicialização do laboratório}
+Na página do laboratório, clique em Access the lab para iniciá-lo.
+
+Assim que o laboratório for carregado, uma nova aba será aberta com uma URL diferente.
+
+\end{block}
+\end{frame}
+
+\begin{frame}{Credenciais}
+\textbf{Username:} wiener \\
+\textbf{Password:} peter
+\end{frame}
+
+\begin{frame}{Acesso a conta}
+
+Após o login bem-sucedido, clique em My account. Você será levado à sua página de perfil.
+
+\begin{block}{Análise das requisições no Burp Suite}
+Retorne à janela do Burp Suite e acesse: Proxy $\rightarrow $ HTTP history
+\end{block}
+Nessa aba, localize a requisição HTTP responsável por carregar a página de perfil do usuário. A requisição será semelhante à exibida a seguir.
+
+\end{frame}
+\begin{frame}{Requisições}
+\begin{figure}
+	\includegraphics[scale=0.34]{requisicoes}
+\end{figure}
+\end{frame}
+
 
 
 	\begin{frame}[allowframebreaks]{Referências Bibliográficas}
