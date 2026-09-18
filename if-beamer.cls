@@ -59,10 +59,63 @@
 \setlength{\cellspacetoplimit}{6pt}
 \setlength{\cellspacebottomlimit}{6pt}
 
+% ------------------------------------------%
+% Cores personalizadas (tons de azul e verde)
+\definecolor{primary}{RGB}{0, 82, 155}
+\definecolor{secondary}{RGB}{0, 140, 100}
+\definecolor{codebg}{RGB}{245,245,245}
+\definecolor{codecomment}{RGB}{100,100,100}
+\definecolor{codestring}{RGB}{170,55,55}
+\definecolor{codekeyword}{RGB}{0,0,180}
+
+\setbeamercolor{palette primary}{bg=primary,fg=white}
+\setbeamercolor{palette secondary}{bg=secondary,fg=white}
+\setbeamercolor{palette tertiary}{bg=primary!80,fg=white}
+\setbeamercolor{structure}{fg=primary}
+\setbeamercolor{block title}{bg=primary,fg=white}
+\setbeamercolor{block body}{bg=primary!5}
+\setbeamercolor{block title example}{bg=secondary,fg=white}
+\setbeamercolor{block body example}{bg=secondary!5}
+
+% ============================================
+% Pacotes
+% ============================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+
+% ============================================
+% Configuração para listagens de código
+% ============================================
+\lstset{
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    commentstyle=\color{codecomment}\itshape,
+    keywordstyle=\color{codekeyword}\bfseries,
+    stringstyle=\color{codestring},
+    frame=single,
+    rulecolor=\color{gray!50},
+    tabsize=4,
+    showstringspaces=false
+}
+
+% ----------------------------------------------------
+
+
+
+
 % --------------------------------------------------- %
 %                   Basic colors	                  %
 % --------------------------------------------------- %
 %%% From http://latexcolor.com/
+
+
+
 
 % Blue
 \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
