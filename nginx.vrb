@@ -1,0 +1,7 @@
+\frametitle{Instalar o PHP-FPM}
+O PHP-FPM interpreta o código PHP.
+
+    ^^I^^I\begin{lstlisting}[language=bash]
+sudo apt update
+sudo apt install php-fpm -y
+\end{lstlisting}
