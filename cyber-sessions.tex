@@ -1,0 +1,180 @@
+	\documentclass[12pt]{exam}
+	\usepackage[utf8]{inputenc}
+	\usepackage[portuguese,brazil]{babel}
+	\usepackage[margin=.65in]{geometry}
+	\usepackage{amsmath,amssymb}
+	\usepackage{multicol}
+	\usepackage{multirow}
+	\usepackage{float}
+	\usepackage{enumerate}
+	\usepackage{enumitem}
+	\usepackage{array}
+	\usepackage{graphicx}
+	\usepackage{listings}
+	\usepackage{circuitikz}    
+	\usepackage{xcolor}
+	\usepackage{tikz}
+	\usetikzlibrary{shapes.multipart, calc}
+	\usepackage{rotating}
+	\usepackage{caption}
+	%\usepackage[version=3]{mhchem}
+
+	\pointpoints{ponto}{pontos}
+	\hpword{Pontos:}
+	\vpword{Pontos}
+	\htword{Total}
+	\vtword{Total:}
+	\vsword{Resultado}
+
+	\definecolor{azul}{RGB}{0,32,96}
+	\definecolor{verde}{RGB}{0,132,124}
+	\definecolor{cinza}{RGB}{0,84,132}
+	%\definecolor{cinza2}{RGB}{218,220,216}
+	\definecolor{cinza2}{RGB}{132,134,136}
+	\definecolor{mygreen}{rgb}{0,0.6,0}
+	\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+	\definecolor{mymauve}{rgb}{0.58,0,0.82}
+	\newcommand*{\vttfamily}{%
+	\fontencoding{T1}\fontfamily{lmvtt}\selectfont
+	}
+	\lstdefinestyle{Cstyle}{%
+	language=C,numbers=left, keywordstyle=\color{mymauve}\vttfamily,commentstyle=\color{mygreen}\vttfamily,stringstyle=\color{blue},basicstyle=\scriptsize\vttfamily,numberstyle=\tiny\vttfamily,breaklines=true,stepnumber=1,tabsize=2,xleftmargin=\leftmarginii,escapechar=!,captionpos=b,morekeywords={include, printf,NULL},columns=flexible,escapeinside={(^}{^)},
+	frame=l,
+	framesep=2.5mm,
+	framexleftmargin=2.5mm,
+	fillcolor=\color{cinza2!50},
+	rulecolor=\color{ballblue},
+	rulecolor=\color{blue}
+	}
+
+	\lstnewenvironment{C}[1][]
+	{
+	\lstset{style=Cstyle,#1}
+	}
+	{}
+
+
+	\newcommand{\class}{Segurança da Informação}
+	\newcommand{\profname}{Gilmar Gomes do Nascimento}
+	\newcommand{\examnum}{Exercício - sessão, IDOR} \newcommand{\examdate}{$\today$}
+	\newcommand*{\oldneg}{\mathord{\nao}}
+	\pagestyle{headandfoot}
+	\runningheadrule
+	\firstpageheader{}{}{}
+	\runningheader{\class}{\examnum}{\examdate}
+	\runningfootrule
+	\firstpagefooter{}{}{}
+	\runningfooter{}{Página \thepage\ de \numpages}{}
+	%\pagestyle{foot}
+	%\lfoot{}
+	%\cfoot[]{Página \thepage\ de \numpages}
+	%\rfoot{}
+	%
+	%\runningfootrule
+	%\boxedpoints %\pointsinmargin
+	%\printanswers
+	%\SolutionEmphasis{\color{red}}
+	%\definecolor{SolutionBoxColor}{gray}{0.8}
+	%\renewcommand{\solutiontitle}{\noindent\textbf{Solução:}\enspace}
+	%\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+
+	\begin{document}
+
+	\noindent
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+	\textbf{Disciplina:} \class &  \multicolumn{2}{c}{\multirow{4}{*}{
+	\includegraphics[scale=0.35]{logo.png}}}\\
+	\textbf{Prof.:} ~\profname \vspace{0.2in} && \\
+	\vspace{0.2in} \textbf{Nome:} \makebox[3in]{\hrulefill} \vspace{0.2in} &&\\
+	%\textbf{Matrícula:} \makebox[1.5in]{\hrulefill} \textbf{Nota:} \makebox[1in]{\hrulefill} &&\\ 
+	%\multicolumn{3}{c}{\textbf{{\examnum \hspace{3px} \examdate}}}\\
+	\multicolumn{3}{c}{}\\
+	\end{tabular*}\\
+	\rule[2ex]{\textwidth}{1.6pt}
+	\parskip=0.1in
+
+	%Este exame contêm \numpages\ páginas (incluindo esta capa) e \numquestions\ questões.\\
+	%Total de \numpoints~ pontos.
+
+	%\begin{center}
+	%Grade Table (for teacher use only)\\
+	%\addpoints
+	%\gradetable[v][questions]
+	%\end{center}
+
+	\noindent
+
+\begin{questions}
+
+\question O que é uma \textbf{sessão} em aplicações web? Explique o papel do cookie de sessão e por que ele é usado em vez de enviar usuário e senha em cada requisição.
+\begin{solutionbox}{2in}
+\end{solutionbox}
+
+\question O que é \textbf{entropia de token}? Por que ela é fundamental para a segurança de tokens de sessão? O que acontece se um token tiver baixa entropia?
+\begin{solutionbox}{1.7in}
+\end{solutionbox}
+
+\question Explique o que é a flag \texttt{HttpOnly} em cookies. Qual ataque ela previne e por quê?
+\begin{solutionbox}{2in}
+\end{solutionbox}
+
+\question Explique o que é a flag \texttt{Secure} em cookies. Em que cenário a ausência dessa flag representa risco?
+\begin{solutionbox}{1.7in}
+\end{solutionbox}
+
+\question Uma aplicação gera tokens de sessão usando apenas \texttt{timestamp} em segundos. Explique por que isso é inseguro e como um atacante poderia explorar essa falha.
+\begin{solutionbox}{1.7in}
+\end{solutionbox}
+
+% ===== BLOCO 2: PRINCÍPIOS DE SEGURANÇA =====
+
+%\section*{Bloco 2: Princípios de Segurança}
+
+\question O que significa o princípio \textbf{Never Trust the Client} (nunca confie no cliente)? Dê um exemplo prático de falha causada pela violação desse princípio.
+\begin{solutionbox}{1.7in}
+\end{solutionbox}
+
+\question Explique o conceito de \textbf{Source of Truth} (fonte da verdade) no contexto de segurança de aplicações. Por que o servidor deve ser sempre a fonte da verdade?
+\begin{solutionbox}{1.7in}
+\end{solutionbox}
+
+%\question Relacione o princípio \textbf{Never Trust the Client} com o lab de IDOR que você resolveu. Como a falha poderia ter sido evitada se o servidor aplicasse esse princípio corretamente?
+%\begin{solutionbox}{3in}
+%\end{solutionbox}
+
+%\question Analise a situação: uma aplicação web valida o preço de um produto no JavaScript do navegador antes de enviar ao servidor. Explique por que isso é uma falha de segurança e qual seria a abordagem correta.
+%\begin{solutionbox}{2.5in}
+%\end{solutionbox}
+
+% ===== BLOCO 3: FUZZING E AUTOMAÇÃO =====
+
+%\section*{Bloco 3: Fuzzing e Automação com Burp}
+
+\question O que é \textbf{fuzzing} no contexto de testes de segurança? Qual o objetivo dessa técnica?
+\begin{solutionbox}{2.5in}
+\end{solutionbox}
+
+\question Explique a diferença entre os três tipos de ataque do Burp Intruder:
+\begin{itemize}
+\item \textbf{Sniper}
+\item \textbf{Pitchfork}
+\item \textbf{Cluster Bomb}
+\end{itemize}
+\begin{solutionbox}{3.2in}
+\end{solutionbox}
+
+%\question Em que cenário você usaria o modo \textbf{Sniper}? E em que cenário o \textbf{Cluster Bomb} seria mais adequado que o \textbf{Pitchfork}?
+%\begin{solutionbox}{3in}
+%\end{solutionbox}
+%
+%\question Considere que você precisa testar um formulário de login com 100 usuários e 100 senhas. Qual modo do Intruder você usaria para testar todas as combinações possíveis? Justifique.
+%\begin{solutionbox}{2.5in}
+%\end{solutionbox}
+%
+%\question Explique como o fuzzing pode ser usado para descobrir \textbf{tokens de sessão previsíveis} ou \textbf{IDs de recursos enumeráveis}.
+%\begin{solutionbox}{3in}
+%\end{solutionbox}
+
+\end{questions}
+
+\end{document}
